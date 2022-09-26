@@ -1,0 +1,5416 @@
+
+###################### VARIABLES #####################################
+let name="Prabakaran";
+let msg="Hello My Name is "+ name +" Iam Learning JavaScript";
+alert(msg);
+console.log(msg);
+let n1=100
+let n2=200
+let n3=n1+n2
+console.log(n3)
+
+
+const name="Prabakaran";
+const dob="16-06-1997"
+let msg="Hello My Name is "+ name +" I born on " + dob +" Iam Learning JavaScript";
+alert(msg);
+console.log(msg);
+#########################################################
+########################### DATA TYPES PRIMITIVE #########################################
+let name="Prabakaran"; //string
+let age=24; //Integer
+let isyoung=true //boolean
+let lastname; //undefined 
+let trophy=null
+
+########################  OBJECTS  ##########################################
+let person = {
+    name: "Prabakaran", age: 27,
+    gender: "Male",
+    address: "Chennai, Tamilnadu, India",
+    sibling: {
+        brother: "Abishek",
+        sister: "Divya",
+    }
+
+}
+person.age = 28
+console.log(name)
+console.log(person.sibling.brother);
+
+############################  ARRAYS   #################################################
+let favcolors=['RED','GREEN','Orange']
+console.log(favcolors)
+console.log(favcolors[0])
+console.log(favcolors[1])
+console.log(favcolors[2])
+favcolors[4]='Yellow';
+console.log(favcolors)
+
+console.log(typeof favcolors)
+console.log(favcolors.length)
+##########################  FUNCTIONS ################################################
+function green(){
+    let name='PRABAKARAN';
+    let msg='Hello i am '+ name +' I am Learning JavaScripts';
+    console.log(msg)
+}
+green()
+
+
+function green(name,lastname){  //Parameter
+    let msg='Hello i am '+ name + " " +lastname+' I am Learning JavaScripts';
+    console.log(msg)
+}
+green('Prabakaran','red')
+green('green','Prabakaran')   //Arguments
+
+
+function add(no1,no2){
+    result=no1+no2            // -  +  *  /   //
+    console.log('Result is :',result)
+}
+add(30,50)
+
+
+############################### OPERATORS ##############################################
+1. Arithmatic Operator
+2. Comparision Operator
+3. Assignment Operator
+4. Logical Operator
+5. Bitwise Operator
+
+1.Arithmatic Operator :
+let no1=10;
+let no2=20;
+console.log(no1+no2)
+console.log(no1-no2)
+console.log(no1*no2)
+console.log(no1/no2)
+console.log(no1%no2)
+console.log(no1**no2)
+
+console.log(++no1);    //Increment
+console.log(no1);
+
+console.log(no1++);
+console.log(no1)
+
+
+console.log(--no2);    //Degrement
+console.log(no2);
+
+
+console.log(no2--);
+console.log(no2)
+
+
+2.Assignment Operator :
+
+let x=5;
+x+=5
+console.log(x)
+x-=1
+console.log(x)
+x*=3
+console.log(x)
+x++
+console.log(x)
+x=x+2
+console.log(x)
+x%=10
+console.log(x)
+
+3. Comparision Operator :
+
+Relational Operator:
+
+let x=5
+console.log(x<5);
+console.log(x<=5);
+console.log(x>5);
+console.log(x>=5);
+
+String Comparision :
+
+console.log('alen'>'anbu');
+console.log('alen'<'anbu');
+
+Comparsion Different Type :
+
+console.log('1'<5);
+console.log(true==0);
+
+Equality Operator :
+
+let x=5
+console.log(x===5);
+console.log(x!==5);
+
+// Strict Equality Operator (Same DataTypes + Value) 
+console.log(1===1); // Number === Number
+console.log('1'===1);  // String === Number
+ 
+// Lose Equality Operator 
+console.group(1==1);
+console.log('1'=='1');
+console.log(true=='1');
+
+Trenary Operator:
+
+let age=12;
+let type=age>18 ? 'Adult Ticket' : 'Child Ticket'  // Condition ? 'Value 1' : 'Value 2'
+console.log(type)
+
+4. Logical Operator :
+
+// LOGICAL AND (&&)
+// Return True Both operents True
+console.log(true && true);
+console.log(false && true);
+console.log(degree && skills);
+
+// LOGICAL OR (||)
+// Return True If any one operents True
+console.log(true || true);
+console.log(false || true);
+
+// LOGICAL OPERATOR
+let income=true;
+let cibi=true;
+let eligible=income&&cibi
+console.log("Status Eligible :",eligible);
+
+// LOGICAL OPERATOR
+let income=true;
+let cibi=false;
+let eligible=income||cibi
+console.log("Status Eligible :",eligible);
+
+
+// LOGICAL OPERATOR
+let income=true;
+let cibi=false;
+let eligible=income||cibi
+let application=!eligible
+
+console.log("Status Eligible :",eligible);
+console.log("Application Status :",application);
+
+basic.js:7 Status Eligible : true
+basic.js:8 Application Status : false
+
+############################# CONITIONAL STATEMENT ################################
+
+// CONDITIONAL STATEMENT
+// 1. IF ELSE CONDITION
+// 2. SWITCH - CASE CONDITION
+let weather="hot";
+if (weather === "hot"){
+    console.log('Weather is :'+"Hot")
+}
+else{
+    console.log("Weather is :"+"Cool")
+}
+
+#####Weather is :Hot
+
+// CONDITIONAL STATEMENT
+// 1. IF ELSE CONDITION
+// 2. SWITCH - CASE CONDITION
+let israining=false;
+let iscloudy=true;
+if(israining||iscloudy){
+    console.log("Dont forget to take Umberla ")
+
+}else{
+    console.log("Sky is Noraml Enjoy ")
+}
+
+#####Dont forget to take Umberla 
+
+// CONDITIONAL STATEMENT
+// 1. IF ELSE CONDITION
+// 2. SWITCH - CASE CONDITION
+let israining=false;
+let iscloudy=false;
+if(israining||iscloudy){
+    console.log("Dont forget to take Umberla ")
+
+}else{
+    console.log("Sky is Noraml Enjoy ")
+}
+
+######Sky is Noraml Enjoy 
+
+// IF HOUR IS BETWEEN 12 AM TO 1 PM ---> GOOD MORNING
+// ELSE IF HOUR IS BETWEEN 1PM TO 5PM ---> GOOD AFTERNOON
+// ELSE HOUR IS BETWEEN 5PM TO 12AM ----> GOOD EVENING
+let hour=12;
+
+if(hour>=0 && hour<=13){
+    console.log("Good Morning");
+}
+else if (hour>=13 && hour<=17){
+    console.log("Good AfterNoon");
+
+}
+else
+console.log("Good Evening ")
+
+
+######Good Morning
+
+let hour=new Date();
+console.log(hour)
+console.log(hour.getHours())
+console.log(hour.getMinutes())
+
+
+basic.js:5 Sat Jul 02 2022 03:54:07 GMT-0700 (Pacific Daylight Time)
+basic.js:6 3
+basic.js:7 54
+
+
+// IF HOUR IS BETWEEN 12 AM TO 1 PM ---> GOOD MORNING
+// ELSE IF HOUR IS BETWEEN 1PM TO 5PM ---> GOOD AFTERNOON
+// ELSE HOUR IS BETWEEN 5PM TO 12AM ----> GOOD EVENING
+
+let hrs=new Date();        //let hour=new Date().getHours();
+let hour=hrs.getHours
+if(hour>=0 && hour<=13){
+    console.log("Good Morning");
+}
+else if (hour>=13 && hour<=17){
+    console.log("Good AfterNoon");
+
+}
+else
+console.log("Good Evening ")
+
+#####Good Evening 
+
+
+// SWITCH CASE
+let grade="A";
+switch(grade){
+    case "S":
+        console.log("Super Grade");
+        break;
+    case "A":
+        console.log("Excellent Grade");
+        break;
+    case "E":
+        console.log("Just Pass");
+        break;
+    case "U":
+        console.log("Arrer")
+        break;
+    default:
+        console.log("Unknown")
+
+}
+######Excellent Grade
+
+// SWITCH CASE
+let grade="B";
+switch(grade){
+    case "S":
+        console.log("Super Grade");
+        break;
+    case "A":
+    case "B":
+        console.log("Excellent Grade");
+        break;
+    case "E":
+        console.log("Just Pass");
+        break;
+    case "U":
+        console.log("Arrer");
+        break;
+    default:
+        console.log("Unknown");
+
+}
+
+#####Excellent Grade
+
+// SWITCH CASE
+let grade="k";
+switch(grade){
+    case "S":
+        console.log("Super Grade");
+        break;
+    case "A":
+    case "B":
+        console.log("Excellent Grade");
+        break;
+    case "E":
+        console.log("Just Pass");
+        break;
+    case "U":
+        console.log("Arrer");
+        break;
+    default:
+        console.log("Unknown");
+
+}
+##### Unknown
+
+
+// SWITCH CASE
+let marks=60;
+switch(true){
+    case (marks>90):
+        console.log("Super Grade ");
+        break;
+    case (marks>50):
+        console.log("Pass");
+        break;
+    case (marks<50):
+        console.log("Failed");
+        break;
+    default:
+        console.log("Unknown");
+}
+
+######Pass
+
+
+// SWITCH CASE
+let amount=5;
+switch(true){
+    case (amount>10 && amount<=60):
+        console.log(" Buy Android Phone ");
+        break;
+    case (amount>=61 && amount<150):
+        console.log("Buy Iphone ");
+        break;
+    case (amount>=5 && amount<=10):
+        console.log("Basic Mobile");
+        break;
+    default:
+        console.log("You cant Affortable ");
+}
+
+####Basic Mobile
+
+######################################################## LOOPING ############################
+	
+JAVSCRIPTS LOOPS
+
+1.FOR LOOP
+2.WHILE LOOP
+3.DO WHILE LOOP
+4.FOR-IN LOOP
+5.FOR-OUT LOOP
+
+
+1. FOR LOOPING 
+
+// for(Initial Expression ; Condition ; Step){}
+for (i=1;i<=5;i++){
+    console.log("Number :",i)
+}
+
+basic.js:3 Number : 1
+basic.js:3 Number : 2
+basic.js:3 Number : 3
+basic.js:3 Number : 4
+basic.js:3 Number : 5
+############################################
+// for(Initial Expression ; Condition ; Step){}
+for (i=1;i<=10;i++){
+    if (i%2!==0){
+    console.log("Number :",i)
+    }
+}
+
+basic.js:4 Number : 1
+basic.js:4 Number : 3
+basic.js:4 Number : 5
+basic.js:4 Number : 7
+basic.js:4 Number : 9
+##############################################
+
+// for(Initial Expression ; Condition ; Step){}
+for (i=10;i>=1;i--){
+    if (i%2!==0){
+    console.log("Odd Number :",i)
+    }
+}
+
+basic.js:4 Odd Number : 9
+basic.js:4 Odd Number : 7
+basic.js:4 Odd Number : 5
+basic.js:4 Odd Number : 3
+basic.js:4 Odd Number : 1
+
+####################################### WHILE LOOPING #############################
+
+let i=15
+while(i>=1){
+    if (i%2 !== 0){
+        console.log("Number ",i)
+    }
+    i--;
+}
+
+basic.js:4 Number  15
+basic.js:4 Number  13
+basic.js:4 Number  11
+basic.js:4 Number  9
+basic.js:4 Number  7
+basic.js:4 Number  5
+basic.js:4 Number  3
+basic.js:4 Number  1
+###################################
+
+let i=1;
+while (i<=15){
+    if(i%3===0){
+        console.log('Number :',i)
+    }
+    i++;
+}
+
+basic.js:4 Number : 3
+basic.js:4 Number : 6
+basic.js:4 Number : 9
+basic.js:4 Number : 12
+basic.js:4 Number : 15
+
+#######################################   DO-WHILE LOOPING    #########################################
+
+let i=1;
+do{
+    if (i%2 !==0){
+        console.log(i)
+    }
+    i++;
+}while(i<=15);
+
+
+basic.js:4 1
+basic.js:4 3
+basic.js:4 5
+;basic.js:4 7
+basic.js:4 9
+basic.js:4 11
+basic.js:4 13
+basic.js:4 15
+
+##############################      FOR-IN LOOPING      ########################################
+const person={
+    name:"Prabakaran",
+    age:25,
+    qualification:"B,E"
+};
+for(let key in person){
+    console.log(key+" : "+person[key]);
+}
+
+basic.js:7 name : Prabakaran
+basic.js:7 age : 25
+basic.js:7 qualification : B,E
+
+#####################################################################################
+let colors=['Green','Red','Yellow'];
+for(let key in colors){
+    console.log(colors[key]);
+}
+
+basic.js:3 Green
+basic.js:3 Red
+basic.js:3 Yellow
+
+#############################  FOR-OF LOOPING    ###########################
+let colors=['Green','Red','Yellow'];
+for(let key of colors){
+    console.log(key);
+}
+
+basic.js:3 Green
+basic.js:3 Red
+basic.js:3 Yellow
+############################### OBJECT & OBJECT OREIENTED PROGRAMMING (OOPS)###############
+let person={
+    name:'Prabakaran',age:25,intrest:['Creating,teaching new things'],isalive:true,
+    address:{city:'Salem',state:'Tamilnadu'},greetings:function(){
+        let msg="My name is "+this.name+" Iam intrested in "+this.intrest;
+        console.log(msg);
+    }
+};
+console.log(person.greetings())
+
+basic.js:5 My name is Prabakaran Iam intrested in Creating,teaching new things
+basic.js:8 undefined
+
+#################
+let person={
+    name:'Prabakaran',age:25,intrest:['Creating,teaching new things'],isalive:true,
+    address:{city:'Salem',state:'Tamilnadu'},greetings:function(){
+        let msg="My name is "+this.name+" Iam intrested in "+this.intrest;
+        console.log(msg);
+    }
+};
+person.greetings()
+basic.js:5 My name is Prabakaran Iam intrested in Creating,teaching new things
+
+################### FACTORY FUNCTIONS  #######################################################
+function createPerson(name){      // CAMELCASE  :: myFirstName
+    return {
+        name:name,
+        greetings:function(){
+            let msg='My name is '+this.name+' ';
+            console.log(msg);
+        }
+    };
+}
+let Praba=createPerson('PRABAKARAN');
+let Karan=createPerson('KARAN')
+Praba.greetings();
+Karan.greetings();
+
+basic.js:6 My name is PRABAKARAN 
+basic.js:6 My name is KARAN 
+##################################
+function createperson(name){
+    return {
+        name,
+        greetings(){
+            let msg='My name is '+this.name+' ';
+            console.log(msg);
+        }
+    };
+}
+let Praba=createperson('PRABAKARAN');
+let Karan=createperson('KARAN')
+Praba.greetings();
+Karan.greetings();
+
+
+basic.js:6 My name is PRABAKARAN 
+basic.js:6 My name is KARAN 
+
+##############################     CONSTRUCTOR FUNCTIONS  #############################
+function PersonName(name){     // PASCAL CASE  :: MyFirstName 
+    this.name=name;
+    this.greeting=function(){
+        let msg="My name is "+this.name;
+        console.log(msg);
+    }
+}
+let val=new PersonName("PRABAKARAN");
+val.greeting();
+
+basic.js:5 My name is PRABAKARAN
+
+
+#######################################   DYNAMIC NATURE OF OBJECTS  ##########################################################
+const person={
+    name:"Prabakaran"
+}
+console.log(person);
+person.age=25
+console.log(person);
+person.greeting=function(){
+
+}
+console.log(person);
+delete person.greeting;
+console.log(person);
+
+basic.js:4 {name: 'Prabakaran'}age: 25name: "Prabakaran"[[Prototype]]: Object
+basic.js:6 {name: 'Prabakaran', age: 25}age: 25name: "Prabakaran"[[Prototype]]: Object
+basic.js:10 {name: 'Prabakaran', age: 25, greeting: ƒ}
+basic.js:12 {name: 'Prabakaran', age: 25}age: 25name: "Prabakaran"[[Prototype]]: Object
+
+############################################    ENUMERATING PROPERTIES OF AN OBJECT  ##################################################################
+const user={
+    name:'Anbu',
+    getFullName(){
+        console.log("My name is ",this.name)
+    }
+}
+for (let key in user){
+    console.log(key,user[key]);
+}
+
+name Anbu
+basic.js:8 getFullName ƒ getFullName(){
+        console.log("My name is ",this.name)
+    }
+
+#########################################  ENUMERATING PROPERTIES OF AN OBJECT   ###############################
+
+const user={
+    name:'Anbu',
+    getFullName(){
+        console.log("My name is ",this.name)
+    }
+}
+
+for(let key of Object.keys(user)){
+    console.log(key);
+}
+
+basic.js:9 name
+basic.js:9 getFullName
+#################################################################################
+ const user={
+    name:'Anbu',
+    getFullName(){
+        console.log("My name is ",this.name)
+    }
+}
+
+for(let key of Object.keys(user)){
+    console.log(key,user[key]);
+}
+
+basic.js:9 name Anbu
+basic.js:9 getFullName ƒ getFullName(){
+        console.log("My name is ",this.name)
+    }
+###############################################################################
+const user={
+    name:'Anbu',
+    getFullName(){
+        console.log("My name is ",this.name)
+    }
+}
+
+for(let key of Object.entries(user)){
+    console.log(key);
+}
+
+basic.js:9 (2) ['name', 'Anbu']0: "name"1: "Anbu"length: 2[[Prototype]]: Array(0)
+basic.js:9 (2) ['getFullName', ƒ]
+
+##############################################################################################
+const user={
+    name:'Anbu',
+    getFullName(){
+        console.log("My name is ",this.name)
+    }
+}
+
+if ('name' in user ){
+    console.log("Yes value");
+}
+
+Yes value
+
+##########################
+const user={
+    name:'Anbu',
+    getFullName(){
+        console.log("My name is ",this.name)
+    }
+}
+
+if ('age' in user ){
+    console.log("Yes value");
+}
+########################## 
+const user={
+    name:'Anbu',
+    getFullName(){
+        console.log("My name is ",this.name)
+    }
+}
+
+if ('age' in user ){
+    console.log("Yes value");
+}
+else{
+    console.log("No")
+}
+
+No
+###################################  CLONING ON JAVASCRIPT  ###############
+const user={
+    name:'Anbu',
+    getFullName(){
+        console.log("My name is ",this.name)
+    }
+}
+let another={};
+
+for(let key in user){
+    another[key]=user[key];
+}
+console.log(another);
+
+basic.js:12 {name: 'Anbu', getFullName: ƒ}getFullName: ƒ getFullName()name: "Anbu"[[Prototype]]: Object
+
+##########################################################################################
+
+const user={
+    name:'Anbu',
+    getFullName(){
+        console.log("My name is ",this.name)
+    }
+}
+let another=user;
+
+console.log(another.name);
+console.log(another.getFullName());
+
+basic.js:9 Anbu
+basic.js:4 My name is  Anbu
+basic.js:10 undefined
+
+###################################################################
+
+const user={
+    name:'Anbu',
+    getFullName(){
+        console.log("My name is ",this.name)
+    }
+}
+let another=Object.assign({},user);
+
+console.log(another);
+
+basic.js:9 {name: 'Anbu', getFullName: ƒ}getFullName: ƒ getFullName()name: "Anbu"[[Prototype]]: Object
+
+####################################################################################
+
+const user={
+    name:'Anbu',
+    getFullName(){
+        console.log("My name is ",this.name)
+    }
+}
+let another=Object.assign({age:25},user);
+
+console.log(another);
+
+basic.js:9 {age: 25, name: 'Anbu', getFullName: ƒ}age: 25getFullName: ƒ getFullName()name: "Anbu"[[Prototype]]: Object
+
+
+##############################################################################
+
+const user={
+    name:'Anbu',
+    getFullName(){
+        console.log("My name is ",this.name)
+    }
+}
+let another={...user};
+
+console.log(another);
+
+{name: 'Anbu', getFullName: ƒ}
+##############################################    MATH OBJECT   #########################################################  
+console.log(Math.PI);
+console.log(Math.abs(-34));
+console.log(Math.ceil(0.7));
+console.log(Math.random());
+console.log(Math.round(1.5));
+console.log(Math.round(1.3));
+console.log(Math.max(100,500,456));
+console.log(Math.min(100,500,456));
+let marks=[100,2000,3904];
+console.log(Math.max(marks));
+console.log(Math.max(...marks));
+console.log(Math.min(...marks));
+
+basic.js:1 3.141592653589793
+basic.js:2 34
+basic.js:3 1
+basic.js:4 0.024893928994013992
+basic.js:5 2
+basic.js:6 1
+basic.js:7 500
+basic.js:8 100
+basic.js:10 NaN
+basic.js:11 3904
+basic.js:12 100
+##########################################  STRING OBJECT ##########################################################
+let firstname="Prabakaran";
+let lastname="KARAN";
+console.log(firstname.length);
+console.log(firstname.charAt());
+console.log(firstname.charAt(5));
+console.log(firstname.charAt(10));
+console.log(firstname.concat(lastname));
+console.log(firstname.concat(' ',lastname));
+console.log(firstname.startsWith("P"));
+console.log(firstname.startsWith("n"));
+console.log(firstname.endsWith("n"));
+console.log(firstname.endsWith("P"));
+console.log(firstname.indexOf("k"));
+console.log(firstname.repeat(5));
+console.log(firstname.replace("Prabakaran",lastname));
+console.log(firstname);
+console.log(firstname.slice(2));
+console.log(firstname.slice(2,8));
+let para="  Hi this some Text  ";
+console.log(para.split());
+console.log(para.split(' ',1));
+console.log(para.split(' ',2));
+console.log(para.substring(7));
+console.log(para.substring(11));
+console.log(firstname.toLowerCase());
+console.log(firstname.toUpperCase());
+console.log(para.trim());
+console.log(para.trimStart());
+console.log(para.trimEnd());
+
+
+
+
+basic.js:3 10
+basic.js:4 P
+basic.js:5 k
+basic.js:6 
+basic.js:7 PrabakaranKARAN
+basic.js:8 Prabakaran KARAN
+basic.js:9 true
+basic.js:10 false
+basic.js:11 true
+basic.js:12 false
+basic.js:13 5
+basic.js:14 PrabakaranPrabakaranPrabakaranPrabakaranPrabakaran
+basic.js:15 KARAN
+basic.js:16 Prabakaran
+basic.js:17 abakaran
+basic.js:18 abakar
+basic.js:20 ['  Hi this some Text  ']
+basic.js:21 ['']
+basic.js:22 (2) ['', '']
+basic.js:23 is some Text  
+basic.js:24 ome Text  
+basic.js:25 prabakaran
+basic.js:26 PRABAKARAN
+basic.js:27 Hi this some Text
+basic.js:28 Hi this some Text  
+basic.js:29   Hi this some Text
+
+################   TEMPLATE LITERALS   #####################################
+const name="Trisha";
+const  message="Thanking you "+ name+"for watching \n CyberDude Channal";
+const message2=`Hello ${name} 
+Thank You fr Watching "CyberDude Channal" welcome
+ with Anbu`;
+ console.log(message);
+ console.log(message2);
+
+ basic.js:6 Thanking you Trishafor watching 
+ CyberDude Channal
+basic.js:7 Hello Trisha 
+Thank You fr Watching "CyberDude Channal"
+ with Anbu
+
+###################################################
+const date=Date();
+console.log(date);
+const now=new Date();
+console.log(now.getDay());
+console.log(now.getDate());
+console.log(now.getFullYear());
+console.log(now.getTime());
+console.log(now.getMonth());
+
+basic.js:2 Wed Jul 06 2022 02:18:58 GMT-0700 (Pacific Daylight Time)
+basic.js:4 3
+basic.js:5 6
+basic.js:6 2022
+basic.js:7 1657099138451
+basic.js:8 6
+
+#####################################    ARRAY ADDING ELEMENT   ##############################################
+// ADDING ELEMENT TO JAVASCRIPT ARRAY
+const number=[12,23,45,67];
+console.log(number);
+number.push("Apple","Banana");      // PUSH 
+console.log(number);
+number.unshift("Orange","Grapse");
+console.log(number);
+number.splice(3,0,"Gova","Sapotta");
+console.log(number);
+
+basic.js:3 (4) [12, 23, 45, 67]0: "Orange"1: "Grapse"2: 123: "Gova"4: "Sapotta"5: 236: 457: 678: "Apple"9: "Banana"length: 10[[Prototype]]: Array(0)
+basic.js:5 (6) [12, 23, 45, 67, 'Apple', 'Banana']
+basic.js:7 (8) ['Orange', 'Grapse', 12, 23, 45, 67, 'Apple', 'Banana']
+basic.js:9 (10) ['Orange', 'Grapse', 12, 'Gova', 'Sapotta', 23, 45, 67, 'Apple', 'Banana']
+##############################################################################################
+// ADDING ELEMENT TO JAVASCRIPT ARRAY
+const number=[12,23,45,67];
+console.log(number);
+number.push("Apple","Banana");      // PUSH 
+console.log(number);
+number.unshift("Orange","Grapse");
+console.log(number);
+number.splice(3,1,"Gova","Sapotta");
+console.log(number);
+
+basic.js:3 (4) [12, 23, 45, 67]
+basic.js:5 (6) [12, 23, 45, 67, 'Apple', 'Banana']
+basic.js:7 (8) ['Orange', 'Grapse', 12, 23, 45, 67, 'Apple', 'Banana']
+basic.js:9 (9) ['Orange', 'Grapse', 12, 'Gova', 'Sapotta', 45, 67, 
+'Apple', 'Banana']0: "Orange"1: "Grapse"2: 123: "Gova"4: "Sapotta"5: 456: 
+677: "Apple"8: "Banana"length: 9[[Prototype]]: Array(0)
+
+##############################################################################
+
+// FINDING ELEMENT IN A JAVASCRIPT ARRAY
+const items=["Apple","Banana","Grapese","Apple"];
+console.log(items.indexOf("Grapese"));
+console.log(items.indexOf("Apple"));
+console.log(items.lastIndexOf("Apple"));
+console.log(items.indexOf("Red")!==-1);
+console.log(items.indexOf("Grapese")!==-1);
+console.log(items.includes("Grapese"));
+console.log(items.includes("Red"));
+
+basic.js:3 2
+basic.js:4 0
+basic.js:5 3
+basic.js:6 false
+basic.js:7 true
+basic.js:8 true
+basic.js:9 false
+
+#########################################################################
+// FINDING ELEMENT IN A JAVASCRIPT ARRAY REFERENCE ARRAY
+const orders=[{id:1,item:"SmartPhone",Quantity:1},
+{id:2,item:"Maggi",Quantity:2}]
+let result=orders.find(function(order){
+    return order.item==="Maggi"
+})
+console.log(result);
+
+{id: 2, item: 'Maggi', Quantity: 2}Quantity: 2id: 2item: "Maggi"[[Prototype]]: Object
+
+
+// FINDING ELEMENT IN A JAVASCRIPT ARRAY REFERENCE ARRAY
+const orders=[{id:1,item:"SmartPhone",Quantity:1},
+{id:2,item:"Maggi",Quantity:2}]
+let result=orders.findIndex(function(order){
+    return order.item==="Maggi"
+})
+console.log(result);
+
+1
+
+###########################################################################
+// ARROW FUNCTIONS
+const orders=[{id:1,item:"SmartPhone",Quantity:1},
+{id:2,item:"Maggi",Quantity:2}]
+let result=orders.find((order) => order.item==="Maggi")
+console.log(result);
+
+basic.js:5 {id: 2, item: 'Maggi', Quantity: 2}Quantity: 2id: 2item: "Maggi"[[Prototype]]: Object
+####################################################################################
+// REMOVING AN ELEMENT IN A ARRAY
+const number=[1,2,3,4,5,6,7,8,9,10];
+number.pop();
+console.log(number); 
+number.shift();
+console.log(number);
+
+basic.js:4 (9) [1, 2, 3, 4, 5, 6, 7, 8, 9]0: 21: 32: 43: 54: 65: 76: 87: 9length: 8[[Prototype]]: Array(0)
+basic.js:6 (8) [2, 3, 4, 5, 6, 7, 8, 9]
+
+
+
+// REMOVING AN ELEMENT IN A ARRAY
+const number=[1,2,3,4,5,6,7,8,9,10];
+number.splice(2,3);
+console.log(number);
+
+basic.js:4 (7) [1, 2, 6, 7, 8, 9, 10]0: 11: 22: 63: 74: 85: 96: 10length: 7[[Prototype]]: Array(0)
+
+
+############################################    EMPTING IN AN JAVASCRIPT ARRAY  ###############################################################
+
+// EMPTING IN AN JAVASCRIPT ARRAY
+let number=[1,2,3,4,5,6,7,8,9,10];
+number=[];
+console.log(number);
+
+[]
+
+##############################
+// EMPTING IN AN JAVASCRIPT ARRAY
+let number=[1,2,3,4,5,6,7,8,9,10];
+number.length=0
+console.log(number);
+
+[]
+########################################
+// EMPTING IN AN JAVASCRIPT ARRAY
+let number=[1,2,3,4,5,6,7,8,9,10];
+number.splice(0,number.length);
+console.log(number);
+
+[]
+
+###################################
+// EMPTING IN AN JAVASCRIPT ARRAY
+let number=[1,2,3,4,5,6,7,8,9,10];
+while (number.length){
+    number.pop();
+}
+console.log(number);
+
+[]
+################################   COMBINING ARRAY  PRIMITIVE TYPE #######################################
+// COMBING ARRAY
+const shopping=["Maggi","Salt","Beans"];
+const additional=["Masala","Matchbox"];
+let receipe=shopping.concat(additional);
+console.log(receipe);
+
+(5) ['Maggi', 'Salt', 'Beans', 'Masala', 'Matchbox']
+
+####################################  EXTRACTING ARRAY PRIMITIVE TYPE ##############################
+// COMBING ARRAY   AND EXTRACTING ARRAY :::
+const shopping=["Maggi","Salt","Beans"];
+const additional=["Masala","Matchbox"];
+let receipe=shopping.concat(additional);
+console.log(receipe);
+let extract=receipe.slice(1,3);
+console.log(extract);
+
+basic.js:5 (5) ['Maggi', 'Salt', 'Beans', 'Masala', 'Matchbox']
+basic.js:7 (2) ['Salt', 'Beans']0: "Salt"1: "Beans"length: 2[[Prototype]]: Array(0)
+#########################################
+
+// COMBING ARRAY AND EXTRACTING ARRAY IN REFERENCE TYPE:
+const shopping=[{item:"Noodles"}];
+const additional=["Maggi","Salt","Beans","Masala","Matchbox"];
+let receipe=shopping.concat(additional);
+console.log(receipe);
+let extract=receipe.slice(1,3);
+console.log(extract);
+
+basic.js:5 (6) [{…}, 'Maggi', 'Salt', 'Beans', 'Masala', 'Matchbox']0: {item: 'Noodles'}1: "Maggi"2: "Salt"3: "Beans"4: "Masala"5: "Matchbox"length: 6[[Prototype]]: Array(0)
+basic.js:7 (2) ['Maggi', 'Salt']0: "Maggi"1: "Salt"length: 2[[Prototype]]: Array(0)
+###################################################
+// COMBING ARRAY AND EXTRACTING ARRAY IN REFERENCE TYPE:
+const shopping=[{item:"Noodles"}];
+const additional=["Maggi","Salt","Beans","Masala","Matchbox"];
+let receipe=shopping.concat(additional);
+shopping[0].item="Vera";
+console.log(receipe);
+let extract=receipe.slice(1,3);
+console.log(extract);
+
+
+basic.js:6 (6) [{…}, 'Maggi', 'Salt', 'Beans', 'Masala', 'Matchbox']0: {item: 'Vera'}1: "Maggi"2: "Salt"3: "Beans"4:
+ "Masala"5: "Matchbox"length: 6[[Prototype]]: Array(0)
+basic.js:8 (2) ['Maggi', 'Salt']
+#######################################################################
+// COMBING ARRAY AND EXTRACTING ARRAY IN REFERENCE TYPE (IMPOROVED VERSIONS):
+const shopping=[{item:"Noodles"}];
+const additional=["Maggi","Salt","Beans","Masala","Matchbox"];
+let recipe=[...shopping,...additional];
+console.log(recipe);
+
+
+basic.js:5 (6) [{…}, 'Maggi', 'Salt', 'Beans', 'Masala', 'Matchbox']
+
+
+####################################
+// COMBING ARRAY AND EXTRACTING ARRAY IN REFERENCE TYPE (IMPOROVED VERSIONS):
+const shopping=["Noodles"];
+const additional=["Maggi","Salt","Beans","Masala","Matchbox"];
+let recipe=[...shopping,...additional];
+console.log(recipe);
+
+basic.js:5 (6) ['Noodles', 'Maggi', 'Salt', 'Beans', 'Masala', 'Matchbox']0: "Noodles"1: "Maggi"2: "Salt"3: "Beans"4: "Masala"5: "Matchbox"
+length: 6[[Prototype]]: Array(0)
+
+############################################################################################
+// COMBING ARRAY AND EXTRACTING ARRAY IN REFERENCE TYPE (IMPOROVED VERSIONS):
+const shopping=["Noodles"];
+const additional=["Maggi","Salt","Beans","Masala","Matchbox"];
+let recipe=[...shopping,45,20,{name:"Praba"},...additional];
+console.log(recipe);
+
+basic.js:5 (9) ['Noodles', 45, 20, {…}, 'Maggi', 'Salt', 'Beans', 'Masala', 'Matchbox']0: "Noodles"1: 452: 203: {name: 'Praba'}4: 
+"Maggi"5: "Salt"6: "Beans"7: "Masala"8: "Matchbox"length: 9[[Prototype]]: Array(0)
+######################################################################################################################################
+// JAVASCRIPT ARRAYS ITERAING ELEMENTS
+const daily=["Wakeup","Eat","Sleeping"];
+for (let key of daily){
+    console.log(key);
+}
+
+basic.js:4 Wakeup
+basic.js:4 Eat
+basic.js:4 Sleeping
+
+##########################################
+// JAVASCRIPT ARRAYS ITERAING ELEMENTS
+const daily=["Wakeup","Eat","Sleeping"];
+daily.forEach((order)=>{
+    console.log(order);
+})
+
+basic.js:4 Wakeup
+basic.js:4 Eat
+basic.js:4 Sleeping
+########################################################
+// JAVASCRIPT ARRAYS ITERAING ELEMENTS
+const daily=["Wakeup","Eat","Sleeping"];
+daily.forEach((order,indexing)=>{    //    ARROW KEY   USE () => {}
+    console.log(indexing,order);
+})
+
+basic.js:4 0 'Wakeup'
+basic.js:4 1 'Eat'
+basic.js:4 2 'Sleeping'
+#####################################  JOINING & SPLITING  #############################################################
+// JAVASCRIPT ARRAYS JOINING & SPLITING  ELEMENTS;
+const daily=["Wakeup","Eat","Sleeping"];
+let order=daily.join();
+console.log(order);
+
+Wakeup,Eat,Sleeping
+
+##############################
+// JAVASCRIPT ARRAYS JOINING & SPLITING  ELEMENTS;
+const daily=["Wakeup","Eat","Sleeping"];
+let order=daily.join(",  ");
+console.log(order);
+
+Wakeup,  Eat,  Sleeping
+
+####################
+// JAVASCRIPT ARRAYS JOINING & SPLITING  ELEMENTS;
+const daily=["Wakeup","Eat","Sleeping"];
+let order=daily.join("*  ");
+console.log(order);
+
+
+Wakeup*  Eat*  Sleeping
+
+#######################################################
+// JAVASCRIPT ARRAYS JOINING & SPLITING  ELEMENTS;
+let fullName="Praba Karan";
+let userName=fullName.split(" ");
+let firstName=userName[0];
+let lastName=userName[1];
+
+console.log(`My name is ${firstName} and last name is ${lastName}`);
+
+basic.js:7 My name is Praba and last name is Karan
+
+################################################
+// JAVASCRIPT ARRAYS JOINING & SPLITING  ELEMENTS;
+let title="This is my Post"
+let order=title.split(" ");
+console.log(order);
+basic.js:4 (4) ['This', 'is', 'my', 'Post']0: "This"1: "is"2: "my"3: "Post"length: 4[[Prototype]]: Array(0)
+
+##############################
+// JAVASCRIPT ARRAYS JOINING & SPLITING  ELEMENTS;
+let title="This is my Post"
+let order=title.split(" ");
+final=order.join("-");
+console.log(final);
+
+basic.js:5 This-is-my-Post
+##############################################
+// JAVASCRIPT ARRAYS JOINING & SPLITING  ELEMENTS;
+let title="This is my Post".toLowerCase();
+let order=title.split(" ");
+final=order.join("-");
+console.log(final);
+
+basic.js:5 this-is-my-post
+#########################################    JAVASCRIPT ARRAY     #################################
+// SORTING JAVASCRIPT ARRAY
+const student=[4,6,2,1];
+student.sort();
+console.log(student);
+
+[1, 2, 4, 6]
+
+#############################
+// SORTING JAVASCRIPT ARRAY
+const student=[4,6,2,1];
+student.sort(function(a,b){
+    return b-a;
+});
+console.log(student);
+
+basic.js:6 (4) [6, 4, 2, 1]0: 61: 42: 23: 1length: 4[[Prototype]]: Array(0)
+
+######################################
+
+// SORTING JAVASCRIPT
+const student=[4,6,2,1];
+student.reverse();
+console.log(student);
+
+basic.js:4 (4) [1, 2, 6, 4]
+
+#################################################
+// SORTING JAVASCRIPT
+const student=[{id:3,name:"Praba"},{id:4,name:"Karthika"},{id:5,name:"Kiruthika"}];
+student.sort(function(a,b){
+    if (a.name<b.name) return -1;
+    if (a.name>b,name) return 1;
+    if (a.name===b.name) return 0;
+})
+console.log(student);
+
+basic.js:8 (3) [{…}, {…}, {…}]0: {id: 4, name: 'Karthika'}1: {id: 5, name: 'Kiruthika'}2: {id: 3, name: 'Praba'}
+length: 3[[Prototype]]: Array(0)
+
+################################################
+
+// SORTING JAVASCRIPT
+const student=[{id:3,name:"Praba"},{id:4,name:"Karthika"},{id:5,name:"Kiruthika"}];
+student.sort(function(a,b){
+    if (a.id<b.id) return -1;
+    if (a.id>b.id) return 1;
+    if (a.id===b.id) return 0;
+})
+console.log(student);
+
+(3) [{…}, {…}, {…}]
+0: {id: 3, name: 'Praba'}
+1: {id: 4, name: 'Karthika'}
+2: {id: 5, name: 'Kiruthika'}
+length: 3
+[[Prototype]]: Array(0)
+
+###########################################################
+// SORTING JAVASCRIPT
+const student=[{id:3,name:"Praba"},{id:4,name:"Karthika"},{id:5,name:"Kiruthika"}];
+student.sort((a,b)=>{
+    val1=a.name.toLowerCase();
+    val2=b.name.toLowerCase();
+    if (val1<val2) return -1;
+    if (val1>val2) return 1;
+    if (val1===val2) return 0;
+})
+console.log(student);
+
+(3) [{…}, {…}, {…}]
+0: {id: 4, name: 'Karthika'}
+1: {id: 5, name: 'Kiruthika'}
+2: {id: 3, name: 'Praba'}
+length: 3
+[[Prototype]]: Array(0)
+
+################################################################
+
+// SORTING JAVASCRIPT
+const student=[{id:3,name:"araba"},{id:4,name:"Karthika"},{id:5,name:"Kiruthika"}];
+student.sort((a,b)=>{
+    val1=a.name.toLowerCase();
+    val2=b.name.toLowerCase();
+    if (val1<val2) return -1;
+    if (val1>val2) return 1;
+    if (val1===val2) return 0;
+})
+console.log(student);
+
+(3) [{…}, {…}, {…}]
+0: {id: 3, name: 'araba'}
+1: {id: 4, name: 'Karthika'}
+2: {id: 5, name: 'Kiruthika'}
+length: 3
+[[Prototype]]: Array(0)
+
+################################################################################
+// TESTING JAVASCRIPT ARRAY
+
+const cal=[12,34,56];
+cal.every((value,index,array)=>{
+    console.log(`Value ${value}`)
+    console.log(`Index is ${index}`);
+    console.log(`array ${array}`)
+});
+
+basic.js:3 Value 12
+basic.js:4 Index is 0
+basic.js:5 array 12,34,56
+#######################################3
+// TESTING JAVASCRIPT ARRAY
+const cal=[37,34,56];
+allowed=cal.every((value,index,array)=>{
+   return value>18;
+});
+console.log(allowed);
+
+true
+
+##################################################
+
+// TESTING JAVASCRIPT ARRAY
+const cal=[16,34,56];
+allowed=cal.some((value,index,array)=>{
+   return value>18;
+});
+console.log(allowed);
+
+true
+
+#########################################################
+// TESTING JAVASCRIPT ARRAY
+const cal=[1,2,3,4,5];
+allowed=cal.every((value)=>{
+   return value%2===0;
+});
+console.log(allowed);
+
+false
+#########################
+
+// TESTING JAVASCRIPT ARRAY
+const cal=[2,4];
+allowed=cal.every((value)=>{
+   return value%2===0;
+});
+console.log(allowed);
+
+true
+
+######################################	
+// TESTING JAVASCRIPT ARRAY
+const cal=[1,2,3,4,5];
+allowed=cal.some((value)=>{
+   return value%2===0;
+});
+console.log(allowed);
+
+true
+
+####################################### JAVASCRIPT TESTING REFERENCE TYPE ########################
+// TESTING JAVASCRIPT ARRAY WITH REFERENCE TYPE
+const items=[
+    {id:1,name:"Mobiles",Deliver:true},
+    {id:2,name:"Laptops",Deliver:true},
+    {id:3,name:"Ipad",Deliver:true}
+]
+let val=items.every((value)=>{
+    return value.Deliver===true;
+})
+console.log("Available :",val);
+
+true
+################################
+// TESTING JAVASCRIPT ARRAY WITH REFERENCE TYPE
+const items=[
+    {id:1,name:"Mobiles",Deliver:true},
+    {id:2,name:"Laptops",Deliver:true},
+    {id:3,name:"Ipad",Deliver:false}
+]
+let val=items.every((value)=>{
+    return value.Deliver===true;
+})
+console.log("Available :",val);
+
+Available : false
+########################################
+// TESTING JAVASCRIPT ARRAY WITH REFERENCE TYPE
+const items=[
+    {id:1,name:"Mobiles",Deliver:true},
+    {id:2,name:"Laptops",Deliver:true},
+    {id:3,name:"Ipad",Deliver:false}
+]
+let val=items.some((value)=>{
+    return value.Deliver===true;
+})
+console.log("Available :",val);
+
+//Available : true
+############################################## FILTERING A JAVASCRIPT ARRAY ##########################
+// FILTERING A JAVASCIPT ARRAY
+const number=[1,2,3,4,5];
+let even=number.filter((value)=>{
+    return value%2===0;
+})
+console.log(even);
+
+basic.js:6 (2) [2, 4]0: 21: 4length: 2[[Prototype]]: Array(0)
+################################
+// FILTERING A JAVASCIPT ARRAY
+const number=[1,2,3,4,5];
+let even=number.filter((value)=>{
+    return value%2===0;
+})
+let odd=number.filter((value)=>{
+    return value%2!==0;
+})
+console.log("Even :",even);
+console.log("Odd :",odd);
+
+basic.js:9 Even : (2) [2, 4]
+basic.js:10 Odd : (3) [1, 3, 5]
+
+###########################################
+// FILTERING A JAVASCIPT ARRAY
+const items=[
+    {id:1,name:"Mobiles",prie:6500},
+    {id:2,name:"Laptops",prie:27500},
+    {id:3,name:"Ipad",prie:8500}
+];
+let affortable=items.filter((value)=>{
+    return value.prie > 10000;
+});
+console.log("Affortable :",affortable);
+
+
+basic.js:10 Affortable : [{…}]0: {id: 2, name: 'Laptops', prie: 27500}length: 1[[Prototype]]: Array(0)
+#####################################   FIND METHOD   #########
+// FIND  A JAVASCIPT ARRAY
+const items=[
+    {id:1,name:"Mobiles",prie:6500},
+    {id:2,name:"Laptops",prie:27500},
+    {id:3,name:"Ipad",prie:8500}
+];
+let affortable=items.filter((value)=>{
+    return value.prie < 10000;
+});
+let findd=items.find((value)=>{
+    return value.prie<10000;
+});
+console.log("Affortable :",affortable);
+console.log("Find method :",findd);
+
+basic.js:13 Affortable : (2) [{…}, {…}]0: {id: 1, name: 'Mobiles', prie: 6500}1: {id: 3, name: 'Ipad', prie: 8500}length: 2[[Prototype]]: Array(0)
+basic.js:14 Find method : {id: 1, name: 'Mobiles', prie: 6500}
+
+################################################
+
+// MAP A JAVASCIPT ARRAY
+const items=[1,2,3,4,5];
+console.log(items);
+let final=items.map((value)=>{
+    return value*2} );
+console.log(final);
+
+basic.js:3 (5) [1, 2, 3, 4, 5]
+basic.js:6 (5) [2, 4, 6, 8, 10]0: 21: 42: 63: 84: 10length: 5[[Prototype]]: Array(0)
+
+###################################################
+// MAP A JAVASCIPT ARRAY
+const people=[{id:1,first:"Praba",last:"Karan"},
+{id:1,first:"Ajith",last:"Kumar"},
+{id:1,first:"Anbu",last:"Selvan"}];
+let val=people.map((value)=>{
+    return value.first+value.last;
+})
+console.log(val)
+
+basic.js:8 (3) ['PrabaKaran', 'AjithKumar', 'AnbuSelvan']0: "PrabaKaran"1: "AjithKumar"2: "AnbuSelvan"length: 3[[Prototype]]: Array(0)
+
+#####################################################
+// MAP A JAVASCIPT ARRAY
+const people=[{id:1,first:"Praba",last:"Karan"},
+{id:1,first:"Ajith",last:"Kumar"},
+{id:1,first:"Anbu",last:"Selvan"}];
+let val=people.map((value)=>{
+    return [value.first+value.last].join(" ");
+})
+console.log(val)
+
+basic.js:8 (3) ['PrabaKaran', 'AjithKumar', 'AnbuSelvan']
+####################################
+// MAP A JAVASCIPT ARRAY
+const people=[{id:1,first:"Praba",last:"Karan"},
+{id:2,first:"Ajith",last:"Kumar"},
+{id:3,first:"Anbu",last:"Selvan"}];
+let val=people.map((value)=>{
+    let fullname=[value.first+value.last].join(" ")
+    let objj={id:value.id,fullname}
+    return objj;
+})
+console.log(val)
+
+basic.js:10 (3) [{…}, {…}, {…}]0: {id: 1, fullname: 'PrabaKaran'}1: {id: 2, fullname: 'AjithKumar'}2: {id: 3, fullname: 'AnbuSelvan'}
+length: 3[[Prototype]]
+: Array(0)
+###########################################
+//  CHINNINIG A JAVASCIPT ARRAY
+const items=[
+    {id:1,name:"Mobiles",prie:7500},
+    {id:2,name:"Laptops",prie:90500},
+    {id:3,name:"Ipad",prie:2400}
+];
+lowprice=items.sort((a,b)=>{
+    return a.prie-b.prie;       //a-b Assending    b-a Desending    
+    
+});
+console.log(lowprice);
+
+(3) [{…}, {…}, {…}]
+0: {id: 3, name: 'Ipad', prie: 2400}
+1: {id: 1, name: 'Mobiles', prie: 7500}
+2: {id: 2, name: 'Laptops', prie: 90500}
+length: 3
+[[Prototype]]: Array(0)
+
+##################################################
+
+//  CHINNINIG A JAVASCIPT ARRAY
+const items=[
+    {id:1,name:"Mobiles",prie:7500},
+    {id:2,name:"Laptops",prie:90500},
+    {id:3,name:"Ipad",prie:2400}
+];
+lowprice=items.sort((a,b)=>{
+    return a.prie-b.prie;
+    
+});
+let title=lowprice.sort((a,b)=>{
+    if(a.name<b.name) return -1;
+    if(a.name>b.name) return  1;
+    return 0;
+});
+let filtered=title.filter((value)=>{
+    return value.prie<=8000;
+});
+let mapping=filtered.map((value)=>{
+    return value.name+" - $ "+value.prie;
+})
+console.log(mapping)
+
+
+basic.js:22 (2) ['Ipad - $ 2400', 'Mobiles - $ 7500']
+#################################################################################
+//  CHINNINIG A JAVASCIPT ARRAY
+const items=[
+    {id:1,name:"Mobiles",prie:7500},
+    {id:2,name:"Laptops",prie:90500},
+    {id:3,name:"Ipad",prie:2400}
+];
+let final=items.sort((a,b)=>{
+    return a.prie-b.prie;
+    
+}).sort((a,b)=>{
+    if(a.name<b.name) return -1;
+    if(a.name>b.name) return  1;
+    return 0;
+}).filter((value)=>{
+    return value.prie<=8000;
+}).map((value)=>{
+    return value.name+" - $ "+value.prie;
+})
+console.log(final)
+
+
+basic.js:19 (2) ['Ipad - $ 2400', 'Mobiles - $ 7500']
+
+##############################################    JAVASCRIPT ARRAY REDUCE METHOD   ##################################
+//  JAVASCRIPT ARRAY REDUE METHOD :
+const donation=[12,45,67,31];
+let total=donation.reduce((previus,current)=>{
+    console.log("Previous :",previus);
+    console.log("Current :",current);
+    return previus+current
+})
+
+console.log("Total :",total);
+
+basic.js:4 Previous : 12
+basic.js:5 Current : 45
+basic.js:4 Previous : 57
+basic.js:5 Current : 67
+basic.js:4 Previous : 124
+basic.js:5 Current : 31
+basic.js:9 Total : 155
+
+#############################################################
+//  JAVASCRIPT ARRAY REDUE METHOD :
+const items=[
+    {id:1,name:"Mobiles",prie:45},
+    {id:2,name:"Laptops",prie:20},
+    {id:3,name:"Ipad",prie:12}
+];
+let total=items.reduce((previous,current)=>{
+    console.log(previous);
+    return previous+current.prie
+},0)
+console.log("Total :",total);
+
+
+basic.js:8 0
+basic.js:8 45
+basic.js:8 65
+basic.js:11 Total : 77
+
+####################################################################
+//  JAVASCRIPT ARRAY REDUE METHOD :
+const items=[
+    {id:1,name:"Mobiles",prie:45},
+    {id:2,name:"Laptops",prie:20},
+    {id:3,name:"Ipad",prie:12}
+];
+let total=items.reduce((previous,current)=>{
+    console.log(previous);
+    return previous+current.prie
+},10)
+console.log("Total :",total);
+
+
+basic.js:8 10
+basic.js:8 55
+basic.js:8 75
+basic.js:11 Total : 87
+######################################################
+//  JAVASCRIPT ARRAY REDUE METHOD :
+const items=[
+    {id:1,name:"Mobiles",prie:45},
+    {id:2,name:"Laptops",prie:20},
+    {id:3,name:"Ipad",prie:12}
+];
+let total=items.reduceRight((previous,current)=>{
+    console.log(previous);
+    return previous+current.prie
+},10)
+console.log("Total :",total);
+
+basic.js:8 10
+basic.js:8 22
+basic.js:8 42
+basic.js:11 Total : 87
+
+####################################################### 
+//  JAVASCRIPT DIFFERENCE BETWEEN SORT(),FIND(), VS FILTER() VS MAP() METHOD :
+const items=[34,4,54,65,12,78];
+// //SORT ()
+// let result=items.sort();
+// console.log(result);
+// basic.js:5 (6) [12, 34, 4, 54, 65, 78]0: 121: 342: 43: 544: 655: 78length: 6[[Prototype]]: Array(0)
+// FIND METHOD();
+// let result=items.find((value)=>{
+//     return value>50;
+// });
+// console.log(result);
+
+// 54
+// let result=items.filter((value)=>{
+//     return value>50;
+// });
+// console.log(result);
+
+// basic.js:17 (3) [54, 65, 78]0: 541: 652: 78length: 3[[Prototype]]: Array(0)
+
+// let result=items.map((value)=>{
+//     return value>50;
+// });
+// console.log(result);
+
+// basic.js:24 (6) [false, false, true, true, false, true]
+
+
+// let result=items.map((value)=>{
+//     return "#"+value;
+// });
+// console.log(result);
+
+// basic.js:32 (6) ['#34', '#4', '#54', '#65', '#12', '#78']
+
+
+// let result=items.reduce((previous,current)=>{
+//     return previous*current;
+// });
+// console.log(result);
+
+// let result2=items.map((previous,current)=>{
+//     return previous*current;
+// });
+// console.log(result2);
+
+
+// basic.js:40 446808960
+// basic.js:45 (6) [0, 4, 108, 195, 48, 390]
+##################################     FUNCTION DECLARATIONS // FUNCTIONS EXPRESSIONS ###########################################
+// FUNCTION DECLARATIONS VS FUNCTION EXPRESSION :
+// FUCTIONS DECLARATIONS
+let no1=45;
+let no2=50;
+function addNo(){
+    let result=no1+no2
+    console.log(result);
+}
+addNo();
+
+95
+################################
+// FUNCTION DECLARATIONS VS FUNCTION EXPRESSION :
+// FUNCTION EXPRESSION (NAMED FUNCTION EXPRESSIONS) 
+
+let no1=45;
+let no2=50;
+const addNo=function addNo(){
+    let result=no1+no2
+    console.log(result);
+}
+
+addNo();
+
+95
+#####################################
+// FUNCTION DECLARATIONS VS FUNCTION EXPRESSION :
+// FUNCTION EXPRESSION (ANONYMUS FUNCTION EXPRESSIONS) 
+
+let no1=45;
+let no2=50;
+const addNo= ()=>{
+    let result=no1+no2
+    console.log(result);
+}
+
+addNo();
+
+95
+
+############################# JAVASCRIPT HOISTING  #####################################
+// JAVASCRIPT HOISTING :  
+// FUNCTIONS DECLARATIONS 
+addNo();
+function addNo(){
+    console.log("Adding Number from function Declarations ");
+
+}
+//FUNCTIONS EXPRESSIONS
+addNo1();
+let addNo1=function(){
+    console.log("Adding No from func Expressions ");
+
+};  /// ; is Must 
+
+basic.js:5 Adding Number from function Declarations 
+basic.js:9 Uncaught ReferenceError: Cannot access 'addNo1' before initialization
+    at basic.js:9:1
+(anonymous) @ basic.js:9
+
+##############################################
+
+// JAVASCRIPT HOISTING :  
+// FUNCTIONS DECLARATIONS 
+addNo();
+function addNo(){
+    console.log("Adding Number from function Declarations ");
+
+}
+//FUNCTIONS EXPRESSIONS 
+let addNo1=function(){
+    console.log("Adding No from func Expressions ");
+
+};  /// ; is Must 
+addNo1();
+basic.js:5 Adding Number from function Declarations 
+basic.js:10 Adding No from func Expressions 
+###################################  IMMDIATELY INVOKED FUNCTIONS EXPRESSION (IIFE)   ###############################
+
+// JAVASCRIPT SELF INVOKING FUNCTIONS:  
+let no1=45844;
+let no2=84554;
+// IMMDIATELY INVOKED FUNCTIONS EXPRESSION (IIFE)
+function sumNumbers(){
+    let result=no1+no2;
+    console.log(result);
+};
+sumNumbers();
+
+basic.js:7 130398
+
+#####################################
+// JAVASCRIPT SELF INVOKING FUNCTIONS:  
+let no1=45844;
+let no2=84554;
+// IMMDIATELY INVOKED FUNCTIONS EXPRESSION (IIFE)
+(function sumNumbers(){
+    let result=no1+no2;
+    console.log(result);
+})();
+
+130398
+
+##########################################
+// JAVASCRIPT SELF INVOKING FUNCTIONS:  
+let no1=45844;
+let no2=84554;
+// IMMDIATELY INVOKED FUNCTIONS EXPRESSION (IIFE)
+(function sumNumbers(num1,num2){
+    let result=num1+num2;
+    console.log(result);
+})(no1,no2);
+
+130398
+######################################################
+// JAVASCRIPT SELF INVOKING FUNCTIONS:  
+let no1=45844;
+let no2=84554;
+// IMMDIATELY INVOKED FUNCTIONS EXPRESSION (IIFE)
+((num1,num2)=>{
+    let result=num1+num2;
+    console.log(result);
+})(no1,no2);
+
+basic.js:7 130398
+
+######################################################
+// JAVASCRIPT SELF INVOKING FUNCTIONS:  
+// IMMDIATELY INVOKED FUNCTIONS EXPRESSION (IIFE)
+((num1,num2)=>{
+    let no1=45844;
+    let no2=84554;
+    let result=no1+no2;
+    (function display(){
+        console.log("Result :",result);
+    })();
+})();
+
+Result : 130398
+###################################################
+// JAVASCRIPT SELF INVOKING FUNCTIONS:  
+// IMMDIATELY INVOKED FUNCTIONS EXPRESSION (IIFE)
+((num1,num2)=>{
+    let no1=45844;
+    let no2=84554;
+    let result=no1+no2;
+    (()=>{
+        console.log("Result :",result);
+    })();
+})();
+
+//Result : 130398
+
+#########################################   FUNCTIONS ARGUMENTS   ######################
+// FUNCTION ARGUMENTS :
+function sumexpense(tiifen,lunch,petrol){
+    return   tiifen+lunch+petrol
+};
+let result=sumexpense(12,35,50);
+console.log(`Your Expense  is ₹${result}`)
+
+Your Expense  is ₹97
+#################################################################
+// FUNCTION ARGUMENTS :
+function sumexpense(tiifen,lunch,petrol){
+    return   tiifen+lunch+petrol
+};
+let result=sumexpense(12,35,50,45,6,7,7,8,43);
+console.log(`Your Expense  is ₹${result}`)
+
+Your Expense  is ₹97
+
+
+// FUNCTION ARGUMENTS :
+function sumexpense(){
+    total=0
+    for (let val of arguments){
+        total+=val
+    }
+    return   total;
+};
+let result=sumexpense(12,35,50,45,6,7,7,8,43,50);
+console.log(`Your Expense  is ₹${result}`)
+
+
+basic.js:10 Your Expense  is ₹263
+
+#########################################  REST OPERATOR  ########################################################
+// REST OPERATOR JAVASCRIPT :
+function  sumExpense(...expense){
+    return expense.reduce((a,b)=>(a+b));
+    
+}
+let result =sumExpense(12,3,4,53,42,2,46,67,4,100);
+console.log(`Your Total is ₹${result}`)
+
+Your Total is ₹333
+
+
+##################################################
+
+// REST OPERATOR JAVASCRIPT :
+function sumExpense(loan,...expense){
+    let total= expense.reduce((a,b)=>{
+        return a+b;
+    });
+    return total-loan
+}
+
+let result=sumExpense(10,23,4,5,667,7,8,100)
+console.log(`Your Total is ${result}`);
+
+Your Total is 804
+
+###############################   FUNCTION DEFAULT PARAMETER JAVASCRIPT #######################
+// FUNCTION DEFAULT PARAMETER JAVASCRIPT :
+function calculateTax(cost,tax){
+    taxAmount=cost*(tax/100);
+    console.log(`Cost is ₹${cost}
+GST Tax ₹${tax}  is : ₹${taxAmount}
+Total amount is ₹${cost+taxAmount}`);
+
+};
+calculateTax(45,18);
+
+Cost is ₹45
+GST Tax ₹18  is : ₹8.1
+Total amount is ₹53.1
+
+#########################################################
+// FUNCTION DEFAULT PARAMETER JAVASCRIPT :
+function calculateTax(cost,tax){
+    tax=tax??18
+    taxAmount=cost*(tax/100);
+    console.log(`Cost is ₹${cost}
+GST Tax ₹${tax}  is : ₹${taxAmount}
+Total amount is ₹${cost+taxAmount}`);
+
+};
+calculateTax(45);
+
+Cost is ₹45
+GST Tax ₹18  is : ₹8.1
+Total amount is ₹53.1
+
+######################################################
+// FUNCTION DEFAULT PARAMETER JAVASCRIPT :
+function calculateTax(cost,tax){
+    tax=tax??18
+    taxAmount=cost*(tax/100);
+    console.log(`Cost is ₹${cost}
+GST Tax ₹${tax}  is : ₹${taxAmount}
+Total amount is ₹${cost+taxAmount}`);
+
+};
+calculateTax(45,25);
+
+Cost is ₹45
+GST Tax ₹25  is : ₹11.25
+Total amount is ₹56.25
+
+#####################################################
+// FUNCTION DEFAULT PARAMETER JAVASCRIPT :
+function calculateTax(cost,tax=18){
+    
+    taxAmount=cost*(tax/100);
+    console.log(`Cost is ₹${cost}
+GST Tax ₹${tax}  is : ₹${taxAmount}
+Total amount is ₹${cost+taxAmount}`);
+
+};
+calculateTax(45);
+
+Cost is ₹45
+GST Tax ₹18  is : ₹8.1
+Total amount is ₹53.1
+
+######################################################
+
+// FUNCTION DEFAULT PARAMETER JAVASCRIPT :
+function calculateTax(cost,tax=18){
+    
+    taxAmount=cost*(tax/100);
+    console.log(`Cost is ₹${cost}
+GST Tax ₹${tax}  is : ₹${taxAmount}
+Total amount is ₹${cost+taxAmount}`);
+
+};
+calculateTax(45,25);
+
+basic.js:5 Cost is ₹45
+GST Tax ₹25  is : ₹11.25
+Total amount is ₹56.25
+##########################################################
+
+// FUNCTION DEFAULT PARAMETER JAVASCRIPT :
+function calculateTax(cost,tax=18){
+    
+    taxAmount=cost*(tax/100);
+    console.log(`Cost is ₹${cost}
+GST Tax ₹${tax}  is : ₹${taxAmount}
+Total amount is ₹${cost+taxAmount}`);
+
+};
+calculateTax(45,'Ship');
+
+basic.js:5 Cost is ₹45
+GST Tax ₹Ship  is : ₹NaN
+Total amount is ₹NaN
+######################################################
+
+// FUNCTION DEFAULT PARAMETER JAVASCRIPT :
+function calculateTax(cost,title,tax=18){
+    
+    taxAmount=cost*(tax/100);
+    console.log(`Cost is ₹${cost}
+GST Tax ₹${tax}  is : ₹${taxAmount}
+Total amount is ₹${cost+taxAmount}`);
+
+};
+calculateTax(45,'Ship');
+
+Cost is ₹45
+GST Tax ₹18  is : ₹8.1
+Total amount is ₹53.1
+
+###########################  GETTER AND SETTER METHOD   #############################
+// JAVASCRIPT GETTER & SETTER METHOD :
+let student ={first:"Praba",last:"Karan",fullName:()=>{
+    return `${student.first} ${student.last}`
+}}
+console.log(student.fullName())
+
+basic.js:5 Praba Karan
+############################################################
+// JAVASCRIPT GETTER & SETTER METHOD :
+let student ={first:"Praba",last:"Karan",fullName(){
+    return `${student.first}${student.last}`
+}}
+console.log(student.fullName())
+
+PrabaKaran
+
+#######################  GETTER METHOD ####################
+// JAVASCRIPT GETTER & SETTER METHOD :
+let student ={first:"Praba",last:"Karan",get fullName(){
+    return `${student.first}${student.last}`
+}}
+console.log(student.fullName)
+// Getter => Used to get Data
+// Setter => Used to set Data
+
+PrabaKaran
+###############################################
+// JAVASCRIPT GETTER & SETTER METHOD :
+let student ={first:"Praba",last:"Karan",
+get fullName(){
+    return `${student.first} ${student.last}`
+}, set fullName (value){
+    let values=value.split(" ");
+    this.first=values[0];
+    this.last=values[1];
+
+
+}}
+student.fullName='Trisha Krishnan'
+console.log(student.fullName)
+// Getter => Used to get Data
+// Setter => Used to set Data
+
+Trisha Krishnan
+
+######################################################
+
+// JAVASCRIPT GETTER & SETTER METHOD :
+let student ={first:"Praba",last:"Karan",
+get fullName(){
+    return `${student.first} ${student.last}`
+}, set fullName (value){
+    let values=value.split(" ");
+    this.first=values[0];
+    this.last=values[1];
+
+
+}}
+student.fullName='Laxmi'
+console.log(student.fullName)
+// Getter => Used to get Data
+// Setter => Used to set Data
+
+basic.js:13 Laxmi undefined
+#################################################
+// JAVASCRIPT GETTER & SETTER METHOD :
+let student ={first:"Praba",last:"Karan",
+get fullName(){
+    return `${student.first} ${student.last}`
+}, set fullName (value){
+    let values=value.split(" ");
+    this.first=values[0];
+    this.last=values[1]??"";   // NULL IS OPERATOR 
+}}
+student.fullName='Laxmi'
+console.log(student.fullName)
+// Getter => Used to get Data
+// Setter => Used to set Data
+
+Laxmi
+
+###########################################################
+// JAVASCRIPT GETTER & SETTER METHOD :
+let student ={first:"Praba",last:"Karan",
+get fullName(){
+    return `${student.first} ${student.last}`
+}, set fullName (value){
+    let values=value.split(" ");
+    this.first=values[0];
+    this.last=values[1]??"";
+
+
+}}
+
+console.log(student.fullName)
+// Getter => Used to get Data
+// Setter => Used to set Data
+
+Praba Karan
+
+##############################################################
+// JAVASCRIPT GETTER & SETTER METHOD :
+let student ={first:"Praba",last:"Karan",
+get fullName(){
+    return `${student.first} ${student.last}`
+}, set fullName (value){
+    let values=value.split(" ");
+    this.first=values[0];
+    this.last=values[1]??"";
+
+
+}}
+student.fullName="Trisha Krishnan"
+
+console.log(student.fullName)
+// Getter => Used to get Data
+// Setter => Used to set Data
+basic.js:14 Trisha Krishnan
+
+###############################   ERROR HANDLING (TRY,THROW, CATCH)  #########################
+// JAVASCRIPT ERROR HANDLING TRY THROW CATCH :
+let student ={first:"Praba",last:"Karan",
+get fullName(){
+   
+    return `${student.first} ${student.last}`
+}, set fullName (value){
+    if (typeof value != "string"){
+        const err=new Error("It is not string ");
+        throw err;
+    }
+    if(value.length<=3) throw ("Name Invalid");
+    let values=value.split(" ");
+    this.first=values[0];
+    this.last=values[1]??"";
+
+
+}}
+try{
+
+student.fullName="p"
+}catch(ex){alert(ex)}
+console.log(student.fullName)
+// Getter => Used to get Data
+// Setter => Used to set Data
+
+#######################################################################
+// JAVASCRIPT GLOBAL SCOPE  OR LOCAL SCOPE :
+function greetuser(){
+    let msg="Hello World";
+    console.log(msg);
+    if (true){
+        let userName="Anbu";
+
+    }
+    for (let i=0;i<=10;i++){
+        console.log(msg+" "+i);
+    }
+}
+greetuser()
+
+basic.js:4 Hello World
+basic.js:10 Hello World 0
+basic.js:10 Hello World 1
+basic.js:10 Hello World 2
+basic.js:10 Hello World 3
+basic.js:10 Hello World 4
+basic.js:10 Hello World 5
+basic.js:10 Hello World 6
+basic.js:10 Hello World 7
+basic.js:10 Hello World 8
+basic.js:10 Hello World 9
+basic.js:10 Hello World 10
+
+#################################################################
+// JAVASCRIPT GLOBAL SCOPE  OR LOCAL SCOPE :
+function greetuser(){
+    let msg="Hello World";
+    console.log(msg);
+    if (true){
+        let userName="Anbu";
+
+    }
+    for (let i=1;i<=10;i++){
+        console.log(msg+" "+i);
+    }
+    console.log(i)
+}
+greetuser()
+
+basic.js:4 Hello World
+basic.js:10 Hello World 1
+basic.js:10 Hello World 2
+basic.js:10 Hello World 3
+basic.js:10 Hello World 4
+basic.js:10 Hello World 5
+basic.js:10 Hello World 6
+basic.js:10 Hello World 7
+basic.js:10 Hello World 8
+basic.js:10 Hello World 9
+basic.js:10 Hello World 10
+basic.js:12 Uncaught ReferenceError: i is not defined
+    at greetuser (basic.js:12:17)
+    at basic.js:14:1
+greetuser @ basic.js:12
+(anonymous) @ basic.js:14
+#############################################################################
+// JAVASCRIPT GLOBAL SCOPE  OR LOCAL SCOPE :
+function greetuser(){
+    let msg="Hello World";
+    console.log(msg);
+    if (true){
+        let userName="Anbu";
+
+    }
+    for (i=1;i<=10;i++){
+        console.log(msg+" "+i);
+    }
+    console.log(i)
+}
+greetuser()
+
+basic.js:4 Hello World
+basic.js:10 Hello World 1
+basic.js:10 Hello World 2
+basic.js:10 Hello World 3
+basic.js:10 Hello World 4
+basic.js:10 Hello World 5
+basic.js:10 Hello World 6
+basic.js:10 Hello World 7
+basic.js:10 Hello World 8
+basic.js:10 Hello World 9
+basic.js:10 Hello World 10
+basic.js:12 11
+
+#####################################  DIFFERENCE BETWEEN LET AND VAR ##################################
+basic.js:7 My Number is # 1
+basic.js:7 My Number is # 2
+basic.js:7 My Number is # 3
+basic.js:7 My Number is # 4
+basic.js:7 My Number is # 5
+basic.js:7 My Number is # 6
+basic.js:7 My Number is # 7
+basic.js:7 My Number is # 8
+basic.js:7 My Number is # 9
+basic.js:7 My Number is # 10
+basic.js:9 11
+basic.js:10 Uncaught ReferenceError: msg is not defined
+    at displayNumber (basic.js:10:17)
+    at basic.js:12:1
+displayNumber @ basic.js:10
+(anonymous) @ basic.js:12
+
+
+######################################################################
+// JAVASCRIPT GLOBAL SCOPE  OR LOCAL SCOPE :
+function greetuser(){
+    let msg="Hello World";
+    yess(msg)
+    console.log(msg);
+    function yess(msg){
+        console.log(msg);
+    } 
+}
+greetuser()
+
+basic.js:7 Hello World
+basic.js:5 Hello World
+##########################################################
+// JAVASCRIPT GLOBAL SCOPE  OR LOCAL SCOPE :
+let namess="Prabakaran";
+function greetuser(){
+    let msg="Hello"+" "+namess;
+    yess(msg)
+    console.log(msg);
+    function yess(msg){
+        console.log(msg);
+    } 
+}
+greetuser()
+
+basic.js:8 Hello Prabakaran
+basic.js:6 Hello Prabakaran
+
+######################################################## 
+// JAVASCRIPT GLOBAL SCOPE  OR LOCAL SCOPE :
+let namess="Prabakaran";
+function greetuser(){
+    let namess="Trisha";
+
+    let msg="Hello"+" "+namess;
+    yess(msg)
+    console.log(msg);
+    function yess(msg){
+        console.log(msg);
+    } 
+}
+greetuser()
+
+Hello Trisha
+basic.js:8 Hello Trisha
+########################################### THIS KEYWORD  #############
+// UNDERSTANDING JAVASCRIPT THIS KEYWORD :
+const channal={
+    title:"CyberDude",videoTitle:"JavaScript",language:["tamil","malayalam","telugu"],
+    suscribe(){
+        console.log(this);
+
+    }
+}
+channal.suscribe();
+
+basic.js:5 {title: 'CyberDude', vi
+deoTitle: 'JavaScript', language: Array(3), suscribe: ƒ}language: (3) ['tamil', 'malayalam', 'telugu']suscribe: 
+ƒ suscribe()title: "CyberDude"videoTitle: "JavaScript"
+[[Prototype]]: Object
+
+###################################################################
+// UNDERSTANDING JAVASCRIPT THIS KEYWORD :
+const channal={
+    title:"CyberDude",videoTitle:"JavaScript",language:["tamil","malayalam","telugu"],
+    suscribe(){
+        console.log(this);
+    },showvideo(){
+        this.language.forEach(function(lang){
+            console.log(this.videoTitle+" - "+lang.toUpperCase());
+        },this)
+    }
+}
+channal.suscribe();
+channal.showvideo();
+
+basic.js:5 {title: 'CyberDude', videoTitle: 'JavaScript', language: Array(3), suscribe: ƒ, showvideo: ƒ}
+basic.js:8 JavaScript - TAMIL
+basic.js:8 JavaScript - MALAYALAM
+basic.js:8 JavaScript - TELUGU
+
+####################################################
+// UNDERSTANDING JAVASCRIPT THIS KEYWORD :
+const channal={
+    title:"CyberDude",videoTitle:"JavaScript",language:["tamil","malayalam","telugu"],
+    suscribe(){
+        console.log(this);
+    },showvideo(){
+        this.language.forEach(function(lang){
+            console.log(this.videoTitle+" - "+lang.toUpperCase());
+        })
+    }
+}
+channal.suscribe();
+channal.showvideo();
+
+basic.js:5 {title: 'CyberDude', videoTitle: 'JavaScript', language: Array(3), suscribe: ƒ, showvideo: ƒ}
+basic.js:8 undefined - TAMIL
+basic.js:8 undefined - MALAYALAM
+basic.js:8 undefined - TELUGU
+
+################################################
+// UNDERSTANDING JAVASCRIPT THIS KEYWORD :
+const channal={
+    title:"CyberDude",videoTitle:"JavaScript",language:["tamil","malayalam","telugu"],
+    suscribe(){
+        console.log(this);
+    },showvideo(){
+        this.language.forEach(function(lang){
+            console.log(this.video+" - "+lang.toUpperCase());
+        },{video:"JS"})
+    }
+}
+channal.suscribe();
+channal.showvideo();
+
+basic.js:5 {title: 'CyberDude', videoTitle: 'JavaScript', language: Array(3), suscribe: ƒ, showvideo: ƒ}
+basic.js:8 JS - TAMIL
+basic.js:8 JS - MALAYALAM
+basic.js:8 JS - TELUGU
+
+##################################################
+// UNDERSTANDING JAVASCRIPT THIS KEYWORD :
+const channal={
+    title:"CyberDude",videoTitle:"JavaScript",language:["tamil","malayalam","telugu"],
+    suscribe(){
+        console.log(this);
+    },showvideo(){
+        let that=this
+        this.language.forEach(function(lang){
+            console.log(that.videoTitle+" - "+lang.toUpperCase());
+        })
+    }
+}
+channal.suscribe();
+channal.showvideo();
+
+basic.js:5 {title: 'CyberDude', videoTitle: 'JavaScript', language: Array(3), suscribe: ƒ, showvideo: ƒ}
+basic.js:9 JavaScript - TAMIL
+basic.js:9 JavaScript - MALAYALAM
+basic.js:9 JavaScript - TELUGU
+
+##############################################################
+// UNDERSTANDING JAVASCRIPT THIS KEYWORD :
+const channal={
+    title:"CyberDude",videoTitle:"JavaScript",language:["tamil","malayalam","telugu"],
+    suscribe(){
+        console.log(this);
+    },showvideo(){
+       // let that=this
+        this.language.forEach(function(lang){
+            console.log(this.videoTitle+" - "+lang.toUpperCase());
+        }.bind(this))
+    }
+}
+channal.suscribe();
+channal.showvideo();
+
+basic.js:5 {title: 'CyberDude', videoTitle: 'JavaScript', language: Array(3), suscribe: ƒ, showvideo: ƒ}
+basic.js:9 JavaScript - TAMIL
+basic.js:9 JavaScript - MALAYALAM
+basic.js:9 JavaScript - TELUGU
+######################################################################
+// UNDERSTANDING JAVASCRIPT THIS KEYWORD :
+const channal={
+    title:"CyberDude",videoTitle:"JavaScript",language:["tamil","malayalam","telugu"],
+    suscribe(){
+        console.log(this);
+    },showvideo(){
+       // let that=this
+        this.language.forEach((lang)=>{                   //  BEST WAY USE THIS KEYWORD
+            console.log(this.videoTitle+" - "+lang.toUpperCase());
+        })
+    }
+}
+channal.suscribe();
+channal.showvideo();
+
+basic.js:5 {title: 'CyberDude', videoTitle: 'JavaScript', language: Array(3), suscribe: ƒ, showvideo: ƒ}
+basic.js:9 JavaScript - TAMIL
+basic.js:9 JavaScript - MALAYALAM
+basic.js:9 JavaScript - TELUGU
+###############################################    D O M ( Document Object Model)   ###################
+BASIC COMMENTS IN DOM 
+//window.open("https://google.com")
+//window.close();
+//window.moveTo(500,200)
+window.resizeTo(10,600)
+window.alert("Hello World");
+window.print("Print");
+console.log(console);
+
+B O M (BROWSER OBJECT MODEL)
+
+1. SCREEN
+
+2.LOCATIONS
+
+3. HISTORY
+
+4.NAVIGATOR
+
+
+1. Screen Object
+
+console.log(window.screen);
+console.log(window.screen.width);
+console.log(window.screen.height);
+console.log(screen);
+console.log(screen.width);
+console.log(screen.height);
+console.log(screen.availHeight);
+console.log(screen.availWidth);
+console.log(screen.colorDepth);
+console.log(screen.pixelDepth);
+
+
+2. Locations Objects
+
+console.log(window.location)
+console.log(window.location.host)
+setInterval(function(){
+    document.title="YEA THIS MY TITLE"
+},6000);
+
+console.log(window.location)
+console.log(window.location.host)
+setInterval(function(){
+    location.href="https://google.com";
+},6000);
+
+
+console.log(window.location)
+console.log(window.location.host)
+console.log(window.location.href)
+setInterval(function(){
+    //location.href="https://google.com";
+    location.assign("https://google.com");
+},3000);
+
+
+3.History Object
+history.back();
+history.forward();
+
+
+
+######################### EXPLORING D O M - DOCUMENT USING JAVASCRIPT #################################
+console.log(document);
+console.log(document.domain);
+console.log(document.URL);
+console.log(document.head);
+
+console.dir(document);
+console.log(document.body);
+console.log(document.links);
+console.log(document.forms);
+console.log(document.images);
+console.dir(document.images);
+console.log(document.all);
+console.log(document.cookie);
+console.log(document.title);
+console.log(document.body);
+console.dir(document.body);
+let mydoc=document;
+console.log(mydoc.body);
+console.log(mydoc.body.children);
+console.dir(mydoc.body.children[0]);
+console.log(mydoc.body.children[0].children[0]);
+console.dir(mydoc.body.children[0].children[0]);
+console.log(mydoc.body.children[0].children[0].innerText="Learn new javascript - Tamil");
+
+###################### D O M PROPERTIES AND METHODS ##########################################
+const person={
+    name:"Prabakaran",
+    place:"Chennai",
+    greetUser(){
+        return `Hello my name is ${this.name} i am from ${this.place}`
+    }
+}
+person.name="Trisha";
+person.place="London";
+
+let val=person.greetUser();
+console.log(val);
+document.body.innerHTML=`<h1> ${val} </h1>`
+
+
+
+const person={
+    name:"Prabakaran",
+    place:"Chennai",
+    greetUser(){
+        return `Hello my name is ${this.name} i am from ${this.place}`
+    }
+}
+const nameinput=prompt("Enter Your Name :","Prabakaran");
+console.log(nameinput);
+const placeInput=prompt("Enter Your Place ","Salem");
+let val=person.greetUser()
+console.log(val)
+
+
+basic.js:9 Prabakaran
+basic.js:12 Hello my name is Prabakaran i am from Chennai
+
+
+const person={
+    name:"Prabakaran",
+    place:"Chennai",
+    greetUser(){
+        return `Hello my name is ${this.name} i am from ${this.place}`
+    }
+}
+const nameInput=prompt("Enter Your Name :","Prabakaran");
+const placeInput=prompt("Enter Your Place ","Salem");
+person.name=nameInput;
+person.place=placeInput;
+let val=person.greetUser()
+console.log(val)
+
+console.log(nameinput);
+
+Hello my name is Sengal i am from Coaiambatore
+
+
+
+
+const person={
+    name:"Prabakaran",
+    place:"Chennai",
+    greetUser(){
+        return `Hello my name is ${this.name} i am from ${this.place}`
+    }
+}
+const nameInput=prompt("Enter Your Name :","Prabakaran");
+const placeInput=prompt("Enter Your Place ","Salem");
+person.name=nameInput;
+person.place=placeInput;
+document.body.innerHTML=person.greetUser();
+
+
+const person={
+    name:"Prabakaran",
+    place:"Chennai",
+    greetUser(){
+        return `Hello my name is ${this.name} i am from ${this.place}`
+    }
+}
+const nameInput=prompt("Enter Your Name :","Prabakaran");
+const placeInput=prompt("Enter Your Place ","Salem");
+person.name=nameInput;
+person.place=placeInput;
+document.write(person.greetUser())
+
+
+
+ <script>
+            const myapp=document.getElementById("app")
+            myapp.innerHTML="VALUEABLE CONTENT"
+            console.log(myapp)
+        </script>
+   
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prabakaran Site</title>
+        <script>
+            document.addEventListener('DOMContentLoaded',()=>{
+                const myapp=document.getElementById("app")
+                myapp.innerHTML="VALUEABLE CONTENT"
+                console.log(myapp)
+            })
+            
+        </script>
+   
+    </head>
+
+    <body>
+        <div >
+            <h1 id="app">New JavaScript DOM</h1>
+            <img src="5.jpg" style="width: 400px; height:300px;">
+        </div>
+        <!-- <script src="basic.js"></script>  -->
+        </body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prabakaran Site</title>
+        <script>
+            document.addEventListener('DOMContentLoaded',()=>{
+                const myapp=document.getElementById("app")
+                myapp.innerHTML="VALUEABLE CONTENT"
+                console.log(myapp)
+            })
+            window.addEventListener('load',()=>{       -----> Image Purpose Only
+                const myapp=document.getElementById("app")
+                myapp.innerHTML="VALUEABLE CONTENT"
+                console.log(myapp)
+            })
+            window.onunload= function(){
+                alert("You are about to be Unloaded")
+            }
+            
+        </script>
+   
+    </head>
+
+    <body>
+        <div >
+            <h1 id="app">New JavaScript DOM</h1>
+            <img src="5.jpg" style="width: 400px; height:300px;">
+        </div>
+        <!-- <script src="basic.js"></script>  -->
+        </body>
+</html>
+
+console.log(document);
+console.dir(document.body.constructor.name);
+console.dir(document.body.constructor.name);
+
+
+########################### How to Select a  D O M Element   ########################
+
+1. getElementById()
+2. getElementsByClassName()
+3. getElementsByTagName()
+4. Finding elements by CSS Selector
+5. querySelector() and querrySelectorAll()
+
+
+1. ##############   getElementById()   #########################
+
+let heading=document.getElementById("app");
+console.log(heading.innerText);
+heading.innerText="Hello DOMS";
+console.log(heading)
+
+let inputFood=document.getElementById("inputfood");
+let inputButton=document.getElementById("inputbutton");
+let resPonse=document.getElementById("response")
+console.log(inputFood,inputButton)
+
+inputButton.addEventListener('click',()=>{
+    resPonse.innerText=inputFood.value
+    console.log(inputFood.value)
+    //document.write(inputFood.value)
+})
+
+
+2. getElementsByClassName()
+
+let inputFood=document.getElementById("inputfood");
+let inputButton=document.getElementById("inputbutton");
+let foodContainer=document.getElementById("foodcontainer");
+
+
+inputButton.addEventListener('click',()=>{
+    foodContainer.innerText=inputFood.value;
+})
+
+
+
+let inputFood=document.getElementById("inputfood");
+let inputButton=document.getElementById("inputbutton");
+let foodContainer=document.getElementById("foodcontainer");
+
+
+inputButton.addEventListener('click',()=>{
+    foodContainer.innerHTML += (`<li class="fooditem">${inputFood.value.toUpperCase()}</li>`);
+})
+
+let foodItems=document.getElementsByClassName("fooditem");
+console.log(foodItems)
+for (let key of foodItems){
+    console.log(key.innerText);
+}
+console.log(foodItems)
+
+
+let inputFood=document.getElementById("inputfood");
+let inputButton=document.getElementById("inputbutton");
+let foodContainer=document.getElementById("foodcontainer");
+
+
+inputButton.addEventListener('click',()=>{
+    foodContainer.innerHTML += (`<li class="fooditem">${inputFood.value.toUpperCase()}</li>`);
+})
+
+let foodItems=document.getElementsByClassName("fooditem");
+
+let allfoods=[].map.call(foodItems,(food)=>food.textContent)
+console.log(allfoods);
+
+['Sambar', 'Rasam', 'Curd', 'Poriyal']
+
+
+3. getElementsByTagName
+
+let inputFood=document.getElementById("inputfood");
+let inputButton=document.getElementById("inputbutton");
+let foodContainer=document.getElementById("foodcontainer");
+
+
+inputButton.addEventListener('click',()=>{
+    foodContainer.innerHTML += (`<li class="fooditem">${inputFood.value.toUpperCase()}</li>`);
+})
+
+// let foodItems=document.getElementsByClassName("fooditem");
+
+// let allfoods=[].map.call(foodItems,(food)=>food.textContent)
+// console.log(allfoods);
+
+// ['Sambar', 'Rasam', 'Curd', 'Poriyal']
+
+const foodEle=document.getElementsByTagName("li");
+console.log(foodEle,"Length",foodEle.length)
+const lists=[].map.call(foodEle,(food)=>food.textContent);
+console.log(lists);
+
+const inputName=document.getElementsByName("inputname");
+console.log(inputName);
+
+
+
+let inputFood=document.getElementById("inputfood");
+let inputButton=document.getElementById("inputbutton");
+let foodContainer=document.getElementById("foodcontainer");
+
+
+inputButton.addEventListener('click',()=>{
+    foodContainer.innerHTML += (`<li class="fooditem">${inputFood.value.toUpperCase()}</li>`);
+})
+
+// let foodItems=document.getElementsByClassName("fooditem");
+
+// let allfoods=[].map.call(foodItems,(food)=>food.textContent)
+// console.log(allfoods);
+
+// ['Sambar', 'Rasam', 'Curd', 'Poriyal']
+
+const foodEle=document.getElementsByTagName("li");
+console.log(foodEle,"Length",foodEle.length)
+const lists=[].map.call(foodEle,(food)=>food.textContent);
+console.log(lists);
+
+const inputName=document.getElementsByName("inputname");
+console.log(inputName);
+
+const result=document.querySelector("div");
+console.log(result)
+console.log(result.innerText)
+
+const results=document.querySelector("main input");
+console.log(results);
+console.log(results.value);
+
+const resultss=document.querySelectorAll("li:last-child");
+console.log(resultss[0].innerText)
+
+const resultsss=document.querySelectorAll("li");
+console.log(resultsss)
+ 
+
+function createAlertViaDom(msg){
+    const main=document.getElementById("main")
+
+const element=document.createElement("div");
+element.className="alert";
+// element.textContent="Food is Updated Successfully !!!";
+const textNode=document.createTextNode(msg)
+element.append(textNode);
+
+
+main.prepend(element);
+console.log(element);
+
+}
+
+createAlertViaDom("Food is updated ")
+createAlertViaDom("Food is updated  !!!")
+
+
+// function createAlertViaDom(){
+//     const main=document.getElementById("main")
+
+// const element=document.createElement("div");
+// element.className="alert";
+// // element.textContent="Food is Updated Successfully !!!";
+// const textNode=document.createTextNode("Food is updated ")
+// element.append(textNode);
+
+
+// main.prepend(element);
+// console.log(element);
+
+// }
+
+// createAlertViaDom()
+
+let inputFood=document.getElementById("inputfood");
+let inputButton=document.getElementById("inputButton");
+let foodContainer=document.getElementById("foodcontainer");
+
+inputButton.addEventListener("click",()=>{
+    let li=document.createElement("li")
+    let node=document.createTextNode(inputFood.value)
+
+    li.className="fooditem"
+    li.append(node)
+    foodContainer.append(li)
+});
+
+// function createAlertViaDom(msg){
+//     const main=document.getElementById("main")
+
+// const element=document.createElement("div");
+// element.className="alert";
+// // element.textContent="Food is Updated Successfully !!!";
+// const textNode=document.createTextNode(msg)
+// element.append(textNode);
+
+
+// main.prepend(element);
+// console.log(element);
+
+// }
+
+// createAlertViaDom("Food is updated ")
+// createAlertViaDom("Food is updated  !!!")
+
+
+
+HOW TO GET AND SET CONTENTS VIA DOM USING JAVASCRIPTS
+
+# 1.textContent
+
+# 2.innerText
+
+# 3.innerHTML
+
+
+const ele=document.querySelector(".alertss");
+
+// console.log(ele.innerText)
+// console.log(ele.innerHTML)
+// console.log(ele.textContent)
+
+ele.innerText="<strong>Successfully</strong> Modified"
+ele.innerHTML="<strong>Successfully</strong> Modified"
+ele.textContent="<strong>Successfully</strong> Modified"
+
+
+
+#DIFFERENCE BETWEEN CREATEELEMENT AND INNERHTML
+
+const main=document.getElementById("main");
+
+function createAlertDivision(msg){
+    const div=document.createElement("div");
+    const textNode=document.createTextNode(msg);
+    div.append(textNode);
+    div.ClassName="alert";
+    main.prepend(div); 
+}
+
+createAlertDivision("Hello i was Created by createElement")
+
+function createAlertDivisionTemp(message){
+    const template=`
+        <div class="alert">
+            ${message}
+        </div>
+        `
+        main.innerHTML +=  template
+    }
+
+createAlertDivisionTemp("Hello i was Created By innerHTML")
+
+
+
+
+const foodContainer=document.getElementById("foodcontainer");
+console.time("Normal Way")
+for(let i=1;i<=1000;i++){
+    const li=document.createElement("li");
+    li.textContent=`Food items ${i}`;
+    li.className="fooditem";
+    foodContainer.append(li);
+
+}
+console.time("Normal Wayy")
+
+const fragMent=document.createDocumentFragment()
+for(let i=1;i<=1000;i++){
+    const li=document.createElement("li");
+    li.textContent=`Food itemssss ${i}`;
+    li.className="fooditem";
+    fragMent.append(li);
+
+}
+
+foodContainer.append(fragMent);
+
+const foodContainer=document.getElementById("foodcontainer")
+const favFoods=["Chicken Briyani", "Fish Biriyani",
+"Veg Biryani","Colon Biriyani"];
+const foodFragment=document.createDocumentFragment();
+favFoods.forEach((Food)=>{
+    const li=document.createElement("li")
+    li.textContent=Food
+    li.className="fooditem"
+
+    foodFragment.append(li)
+})
+foodContainer.append(foodFragment);
+
+
+
+const foodContainer=document.getElementById("foodcontainer");
+console.time("Normal Way")
+for(let i=1;i<=1000;i++){
+    const li=document.createElement("li");
+    li.textContent=`Food items ${i}`;
+    li.className="fooditem";
+    foodContainer.append(li);
+
+}
+console.time("Normal Wayy")
+
+const fragMent=document.createDocumentFragment()
+for(let i=1;i<=1000;i++){
+    const li=document.createElement("li");
+    li.textContent=`Food itemssss ${i}`;
+    li.className="fooditem";
+    fragMent.append(li);
+
+}
+
+foodContainer.append(fragMent);
+
+const foodContainer=document.getElementById("foodcontainer")
+const favFoods=["Chicken Briyani", "Fish Biriyani",
+"Veg Biryani","Colon Biriyani"];
+const foodFragment=document.createDocumentFragment();
+favFoods.forEach((Food)=>{
+    const li=document.createElement("li")
+    li.textContent=Food
+    li.className="fooditem"
+
+    foodFragment.append(li)
+})
+foodContainer.append(foodFragment);
+
+
+INSERTING DOM ELEMENTS USING JAVASCRIPT
+
+const foodContainer=document.getElementById("foodcontainer");
+const li=document.createElement("li");
+li.textContent=`Maggi`;
+li.className="fooditem";
+
+
+foodContainer.append(li) //append prepend before
+foodContainer.prepend(li) //append prepend before
+foodContainer.before(li) //append prepend before
+foodContainer.after(li) //append prepend before after
+
+// Old way of Doing
+console.log(foodContainer.parentNode.insertBefore(li,foodContainer))
+console.log(foodContainer.parentNode.insertBefore(li,foodContainer.nextSibling))
+
+
+
+INSERTING DOM  AS STRTING TEMPLATE
+
+const foodContainer=document.getElementById("foodcontainer");
+
+// foodContainer.insertAdjacentHTML("afterbegin","<li>Food Items</li>");
+// foodContainer.insertAdjacentHTML("afterend","<li>Food Items</li>");
+// foodContainer.insertAdjacentHTML("beforebegin","<li>Biriyani Items</li>");
+// foodContainer.insertAdjacentHTML("beforeend","<li>Biriyani Items</li>");
+
+
+// foodContainer.insertAdjacentText("afterbegin","Hello World")
+// foodContainer.insertAdjacentElement("afterbegin","Hello World")
+const li=document.createElement("li");
+li.textContent="New List";
+li.className="fooditem";
+foodContainer.insertAdjacentElement("beforebegin",li)
+
+
+# REPLACING DOM ELEMENTS
+// const foodContainer=document.querySelector("#foodcontainer");
+
+
+const sambarli=document.querySelector(".foodcontainer:first-child")
+console.log(sambarli)
+const li=document.createElement("li");
+li.textContent="PULI Satham";
+li.className="fooditem";
+// sambarli.replaceWith(li) ///New Way
+sambarli.replaceChild
+
+######### APPEND METHOD ###############################
+let food=document.getElementById("inputfood");
+let btn=document.getElementById("inputbutton");
+let container=document.getElementById("foodcontainer");
+
+btn.addEventListener("click",()=>{
+    let li=document.createElement("li")
+    li.textContent=food.value;
+    // let node=document.createTextNode(inputFood.value)
+    li.className="fooditem"
+    container.append(li);
+
+});
+
+
+##########   CLONING NODE ###########################
+const foodContainer=document.querySelector("#foodcontainer");
+const duplicate=document.getElementById("duplicate")
+const synk=document.getElementById("sync");
+// console.log(foodContainer)
+
+
+synk.addEventListener("click",()=>{
+    duplicate.innerHTML="";
+    const cloneData=foodContainer.cloneNode(true);
+    duplicate.append(cloneData) 
+
+});
+
+################ REMOVING DOM ELEMENT   ###################################
+let food=document.getElementById("inputfood");
+let btn=document.getElementById("inputbutton");
+let container=document.getElementById("foodcontainer");
+
+btn.addEventListener("click",()=>{
+    let li=document.createElement("li");
+    const divitems=document.createElement("div");
+    const divremovebtn=document.createElement("div");
+    li.append(divitems,divremovebtn)
+
+    divremovebtn.parentElement.setAttribute("onclick","removeItems(event)")
+    divremovebtn.innerHTML=`X`
+    li.append(divitems)
+    
+    divitems.textContent=food.value;
+    li.className="fooditem";
+    container.append(li)
+    li.append(divitems)
+    li.append(divremovebtn)
+});
+
+
+##################    REMOVE  ELEMENT METHOD   ###############
+ const foodContainer=document.querySelector("#foodcontainer");
+
+function removeItems(event){
+    let lists=event.target.parentNode
+    console.log(lists)
+    lists.remove();
+
+}
+
+###########################   LOOPING OVER DOM ELEMENT ###########
+const  foodcontainer=document.querySelectorAll(".foodcontainer li");
+const foodItems=[];
+for (const item of foodcontainer){
+    foodItems.push(item.innerText)
+    
+}
+console.log(foodItems)
+// Spread Operator
+foodcontainer.forEach((food)=>console.log('Food : '+food.nodeName))
+const newFoodValue=[...foodcontainer].forEach((food)=>console.log('Food : ',food))
+console.log(newFoodValue)
+// const favFoods=[
+//     'Chicken Biriyani',
+//     'Mutton Biriyan',
+//     'Fish Biriyani'
+// ];
+//  for(let i=0;i<favFoods.length;i++){
+//     console.log("My Fav Food is :",favFoods[i])
+//  }
+
+//  for (const item of favFoods){
+//     console.log("Mi foods :"+item)
+//  }
+
+########################### FINDING CHILDREN ELEMENT ##########
+const  foodcontainer=document.querySelector("#foodcontainer");
+// const lists=document.querySelectorAll("li")
+// // queryselectorAll : Node Lists
+// console.log(lists,lists.length)
+// //Children : HTML COLLECTION
+// console.log(foodcontainer.children)
+
+// // ChildNodes
+// console.log(foodcontainer.childNodes) 
+console.log(foodcontainer.firstChild)
+console.log(foodcontainer.firstElementChild.innerText)
+console.log(foodcontainer.lastChild)
+console.log(foodcontainer.lastElementChild.innerText)
+
+################# FINDING PARENT ELEMENT############
+const  foodcontainer=document.querySelector("#foodcontainer li");
+// console.log(foodcontainer);
+// console.log(foodcontainer.innerText);
+// console.log(foodcontainer.parentNode)
+// console.log(foodcontainer.parentElement)
+// console.log(foodcontainer.parentElement.parentElement)
+console.log(foodcontainer.closest("main"));
+console.log(foodcontainer.closest(".inputbutton"));
+console.log(foodcontainer.closest("#inputfood
+
+############################   SIBILINGS    #####################
+const  numbers=document.querySelector("ul:last-child li");
+console.log(numbers.innerText);
+console.log(numbers.nextSibling)
+console.log(numbers.nextElementSibling)
+console.log(numbers.nextElementSibling.innerText)
+console.log(numbers.previousSibling)
+console.log(numbers.previousElementSibling)
+console.log(numbers.previousElementSibling.innerText)
+
+
+####################   ELEMENT PROPERTIES   ##########################
+const  inputname=document.querySelector(".inputname input");
+console.log(inputname.name);
+console.log(inputname.type);
+console.log(inputname.id);
+console.log(inputname.placeholder);
+console.log(inputname.value);
+// inputname.value="Trisha"
+// inputname.setAttribute("value","Rajjini")
+// inputname.setAttribute("name","Lastname")
+inputname.setAttribute("value","3")
+console.log(inputname.value)
+const age=prompt("What is your age")
+const saveint=parseInt(inputname.value,age)
+console.log(typeof inputname.value)
+console.log(typeof saveint)
+
+######################    SETTING HTML ATTRIBUTES ################################
+const  inputname=document.querySelector(".inputname input");
+inputname.setAttribute("value","Rajjini")
+const alive=inputname.getAttribute("isAlive")
+const place=inputname.getAttribute("place")
+
+console.log(alive);
+console.log(place);
+console.log(inputname.attributes)  // List all the attributes of the element
+console.log(inputname.attributes[5])  //attibutes by index
+console.log(inputname.attributes.place)   //(DOT Notation)
+console.log(inputname.attributes.place.value)
+console.log(inputname.attributes["intrest"].value)  //attributes by Bracket Notation
+console.log(inputname.attributes["intrest"].value)
+
+console.log(inputname.hasAttribute("place"))  // Check Existence attribute
+inputname.removeAttribute("isAlive")   /// Remove Existence Attribute
+
+console.log(inputname.getAttribute("style"))
+console.log(inputname.style)   // Returns CSS Style declarations instead of value
+
+console.log(inputname)
+console.log(inputname.dataset)
+console.log(inputname.dataset["intrest"]);
+
+for(let attr of inputname.attributes){
+    console.log(attr)
+    console.log(attr.name)
+    console.log(attr.value)
+}
+######################     GETTING INLINE STYLE #############################
+const inputname=document.querySelector(".inputname input")
+const button=document.querySelector(".inputname button")
+//style="padding: 6px 10px;font-size: 10px; background-color: royalblue;
+// border: none; border-radius: 5px; color: white; text-transform: uppercase;"
+
+
+// 1.Setattibute
+
+button.setAttribute("style","padding: 6px 10px;font-size: 10px; background-color: royalblue;border: none; border-radius: 5px; color: white; text-transform: uppercase;")
+
+// 2.Direct Property Access
+
+button.style.padding="10px"
+button.style.fontSize="15px"
+button.style.backgroundColor="royalblue"
+
+// 3.cssText   ///Esay Way
+button.style.cssText="background-color:red;"
+button.style.cssText+="font-weight:bold;"
+
+//Getting Syle
+
+console.log(button.style.backgroundColor);
+
+// Get Computing Style
+console.log(window.getComputedStyle(button))
+
+
+###################   PREVENTING DEFAULT ACTIONS ##############
+onclick="return false"   LINK NOT WORKING IN <a href="#"
+onclick="event.preventDefault()"
+
+
+const form=document.querySelector("form")
+const forminput=document.querySelector("form input")
+const formcheck=document.querySelector("form input[type='checkbox']")
+
+form.addEventListener("submit",(event)=>{
+    event.preventDefault()  // STOP DEFAULT ACTIONS
+
+    if(!formcheck.checked){
+        alert("Check the Terms")
+    }
+    else{
+        console.log("Form Submitted",forminput.value,formcheck.checked)
+    }
+})
+
+
+############################  EVENT DELEGATIONS DYNAMIC EVENTS  ###############################
+
+const list=document.querySelectorAll("form li")
+list.forEach((li)=>{
+    li.addEventListener("click",()=>{
+        console.log("Clicked",li.textContent)
+    })
+})
+
+
+
+console.log(list)
+
+
+
+const table=document.querySelector("table")
+let selector;
+table.addEventListener("click",(event)=>{
+    const target=event.target
+    const close=target.closest("tr")
+    console.log(close)
+    if(target.tagName==="TH"){
+        return
+    }  /// Ignoring TH Element
+    if(selector!=undefined){
+        selector.classList.remove("tr");
+    }
+    selector=close
+    console.log("CLICKED",target)
+    close.classList.add("tr")
+    console.log(close.children[0].textContent)
+    alert(`Hello ${target.innerText}`)
+});
+
+
+Dummyyyyyyyy
+// const id=document.getElementById("formss")
+document.addEventListener("click",(event)=>{
+    id=event.target.id
+    if(!id){
+        return
+    }
+    const ele=document.getElementById("id")
+    ele.hidden!=!ele.hidden
+})
+
+
+##################### EVENTS ##################################
+1. MOUSE EVENTS 
+
+2. KEYBOARD EVENTS
+
+3.POINTER EVENTS
+
+4.FORM EVENTS
+
+
+###### MOUSE EVENTS ##############################
+document.addEventListener("mousedown",(event)=>{
+    console.log("Mouse Down :",event)
+})
+document.addEventListener("copy",(event)=>{
+    // event.preventDefault()
+    // alert("Copy Not Prohibited")
+
+})
+document.addEventListener("mouseup",(event)=>{
+    console.log("Mouse Up :",event)
+})
+
+document.addEventListener("mouseenter",(event)=>{
+    console.log("Mouse Enter :",event)
+})
+let itemss=document.getElementById("itemsss");
+
+itemss.addEventListener("mouseenter",(event)=>{
+    console.log("Mouse Enter",event)
+});
+
+document.addEventListener("mouseleave",(event)=>{
+    console.log("Mouse Leave :",event)
+})
+document.addEventListener("mous",(event)=>{
+    console.log("Mouse Up :",event)
+// })
+document.addEventListener("mousemove",event=>{
+    console.log("Mouse Move :",event)
+})
+document.addEventListener("mouseout",event=>{
+    console.log("Mouse Out :",event)
+})
+document.addEventListener("mouseover",event=>{
+    console.log("Mouse Over :",event)
+})
+
+document.addEventListener("dblclick",event=>{
+    console.log("Double Click",event)
+})
+document.addEventListener("click",event=>{
+    console.log("One Click",event)
+})
+
+
+document.addEventListener("mouseup",event=>{
+    switch (event.which) {
+        case 1:
+            alert("Left Key")
+            break;
+        case 2:
+            alert("Middle Click")
+            break;
+        case 3:
+            alert("Right Click")
+            break;
+        default:
+            alert("Invalid Click")
+            break;
+    }
+    console.log("Mouse Up :",event)
+})
+
+###########################  KEYBOARD EVENTS #########################
+KEYBOARD EVENTS 
+
+document.addEventListener("keydown",(event)=>{
+    console.log("Key Down :",event)
+})
+document.addEventListener("keydown",(event)=>{
+    console.log("Key Down :",event.key)
+})
+
+document.addEventListener("keyup",(event)=>{
+    // console.log("Key UP :",event.key,"Code :",event.code)
+    console.log(event)
+    switch (event.key) {
+        case "ArrowUp":
+            alert("You Have pressed Arrow Up")
+            break;
+        case "ArrowDown":
+            alert("You Have Pressed Arrrow Down")
+            break;
+        case "ArrowLeft":
+            alert("You Have Pressed Arrrow Left")
+            break;
+        case "ArrowRight":
+            alert("You Have Pressed Arrrow Right")
+            break;
+        
+        default:
+            alert("Unknown Key Pressesd")
+            break;
+    }
+})
+
+
+let food=document.getElementById("inputfood");
+let btn=document.getElementById("inputbutton");
+let container=document.getElementById("foodcontainer");
+
+
+// btn.addEventListener("click",()=>{
+   
+// });
+
+const handleinput=()=>{
+    let li=document.createElement("li")
+    li.textContent=food.value;
+    // let node=document.createTextNode(inputFood.value)
+    // li.className="fooditem"
+
+    const divitems=document.createElement("div");
+    const divremovebtn=document.createElement("div");
+    li.append(divitems,divremovebtn)
+
+    divremovebtn.parentElement.setAttribute("onclick","removeItems(event)")
+    divremovebtn.innerHTML=`X`
+    li.append(divitems)
+    
+    divitems.textContent=food.value;
+    li.className="fooditem";
+    container.append(li)
+    li.append(divitems)
+    li.append(divremovebtn)
+};
+
+btn.addEventListener("click",handleinput)
+
+food.addEventListener("keyup",event=>{
+    if(event.key==="Enter"){
+        handleinput()
+
+    }
+    else if(event.key==="KeyZ"){
+        food.value="";
+    }
+
+})
+
+// UNDO OPERATION
+###########################   FORM VALIDATIONS #######################################
+// const el=document.querySelector(".fullname")
+// console.log(el)
+
+// const form=document.forms[0]
+// console.log(form)
+
+// Best Way
+// const formel=document.forms.feedform;
+// const fullname=formel.elements[0]
+// const email=formel.elements[4]
+
+// console.log("fullname :",fullname, "Email :",email)
+// console.log("fullname :",fullname.value, "Email :",email.value)
+const formel=document.forms.feedform;
+
+// const fullname=formel.elements.fullname
+// const type=formel.elements.type
+// const email=formel.elements.email
+// const textarea=formel.elements.textarea
+// const terms=formel.elements.terms
+
+
+// console.log(fullname, type, email, textarea, terms)
+
+
+
+
+FORM SUBMIT AND FORM VALIDATIONS
+
+/// OBJECT DESTRUCTING
+const formel=document.forms.feedform;
+const btn=document.querySelector("form button")
+const handle=(event)=>{
+    event.preventDefault();
+    // const {fullname:name,type,email,textarea,terms}=formel.elements;
+    // console.log(...new FormData(formel))
+    const formdata=new FormData(formel)
+    // console.log("Forms has been Submitted")
+}
+const handledata=(e)=>{
+    // console.log(e)
+    console.log("Form Data Fired ")
+    const formdata=e.formData
+
+
+    // USEFULL METHOD
+    formdata.append("api-key","hjkhkhlkjlk")
+    // console.log("Form Entries :",formdata.entries())
+    console.log("Form Entries :",[...formdata.entries()])
+    console.log("Form Values  :",[...formdata.values()])
+    console.log("Form Keys  :",[...formdata.keys()])
+    console.log("Form GETS  :",formdata.get("fullname"))
+    console.log("Form GETS ALL  :",formdata.getAll("type"))
+    console.log("Form GETS ALL  :",formdata.has("email"))
+    console.log("Form SET :",formdata.set("Hobby","Criket"))
+    console.log("Form  :",formdata.set("Hobby","Criket"))
+    formdata.delete("terms")
+    console.log("Form Entries :",[...formdata.values()])
+
+    console.log("Form Datas",formdata)
+
+}
+formel.addEventListener("submit",handle)
+formel.addEventListener("formdata",handledata)
+// console.log(fullname, type, email, textarea, terms)
+
+
+////////// TRANSFORMING HTML FORMDATA TO SERVER
+/// OBJECT DESTRUCTING
+const formel=document.forms.feedform;
+const btn=document.querySelector("form button")
+const handle=(event)=>{
+    event.preventDefault();
+
+    const formdata=new FormData(formel)
+    const data=[...formdata.entries()]
+    console.log("DATAS :",data)
+    // const datastring=data.map((x)=>
+    // `${x[0]}=${x[1]}`);
+    // const datastring=data.map((x)=>`${encodeURIComponent(x[0])}=${encodeURIComponent(x[1])}`).join('&');
+    // const datastring=data.map((key,value)=>
+    // `${encodeURIComponent(key)}=${encodeURIComponent(value)}`).join('&'); //OLD WAY DOING
+    // console.log(" USING MAPData String :",datastring)
+    
+    // const datastrin2=new URLSearchParams(formdata).toString()
+    // console.log("USING URLSearchParams ",datastrin2)
+    //1.QUERY STRING
+    //2.JSON
+
+    // const jsondata=Object.fromEntries(formdata); This Give Object Method
+    const jsondata=JSON.stringify(Object.fromEntries(formdata)); //This Give Object to JSON FILE CONVERTING Method
+    // SEND TO BACKEND
+    console.log("JSON DATA :",jsondata)
+}
+formel.addEventListener("submit",handle)
+
+
+/////////////////// FORMS HANDLING INPUT EVENTS  /////////////////////////
+/// OBJECT DESTRUCTING
+const formel=document.forms.feedform;
+const btn=document.querySelector("form button")
+
+const nameel=formel.elements.fullname
+
+
+console.log(nameel);
+1. EVENTS
+
+nameel.addEventListener("focus",()=>{
+    console.log("Focused !!!!")
+})
+nameel.addEventListener("blur",()=>{
+    console.log("Bluer Clicked !!!!")
+})
+nameel.addEventListener("input",(event)=>{
+    console.log("You hvae Entered :",event.target.value)
+})
+nameel.addEventListener("change",(event)=>{
+    console.log("You hvae Change Value:",event.target.value)
+})
+// OTHER EVENTS
+nameel.addEventListener("cut",()=>{
+    console.log("CUT Clicked !!!!")
+})
+nameel.addEventListener("copy",()=>{
+    console.log("COPY Clicked !!!!")
+})
+nameel.addEventListener("paste",()=>{
+    console.log("PASTE Clicked !!!!")
+})
+
+//2. METHODS
+nameel.focus();
+nameel.blur();
+
+
+
+const greet=document.querySelector("#greet")
+
+nameel.addEventListener("input",(event)=>{
+    greet.innerText=`Hello ${event.target.value}`
+})
+nameel.addEventListener("change",(event)=>{
+    greet.innerText=`Hello ${event.target.value}`
+})
+
+// 1. Attributes
+// nameel.disabled=true;
+// nameel.readOnly=true;
+
+const handle=(event)=>{
+    event.preventDefault();
+    // nameel.value="Chandru";
+    // console.log(nameel.value);
+
+    const formdata=new FormData(formel)
+
+    
+}
+formel.addEventListener("submit",handle)
+
+################ HANDLING RADIO INPUTS ####### 
+/// OBJECT DESTRUCTING
+const formel=document.forms.feedform;
+const inputcate=document.querySelector("#inputcate");
+
+const types=formel.elements.type
+const alltypes=[...types]
+// console.log(inputcate)
+
+//1. ATTRIBUTES
+// alltypes.forEach((cate)=>{
+//     console.log(cate.checked)
+// })
+
+//2. EVENTS
+// inputcate.addEventListener("change",(event)=>{
+//     // const checked=alltypes.find((msy)=>{
+//     //     return msy.checked
+//     // })
+//     // console.log("Selected :",checked.value)
+//     console.log("Using Simple :",event.target.value) // BEST WAY
+// })
+
+//3. METHODS
+alltypes[1].select();
+alltypes[2].checked=true;
+
+const handle=(event)=>{
+    event.preventDefault();
+
+    const formdata=new FormData(formel)
+
+    
+}
+formel.addEventListener("submit",handle)
+
+inputcate.addEventListener("change",(event)=>{
+  const check=event.target.value
+  
+  if(check==="contribution"){
+   setTimeout(()=>{
+    alert("Thank u FOR cONtributing ");
+   },3000) 
+  }
+})
+#################  CHECKBOX EVENTS ##################
+/// OBJECT DESTRUCTING
+const formel=document.forms.feedform;
+
+// const hobby=formel.elements.hobby
+const terms=formel.elements.terms
+
+// const hobbylist=[...hobby]
+// console.log(hobbylist)
+
+// hobbylist.forEach((hob)=>{
+//   console.log(hob.checked)
+// })
+
+// console.log(hobby[0].value)
+console.log(terms)
+
+//1. ATTRIBUTES
+// hobby[0].checked=true
+terms.checked=true
+console.log(terms.value)
+
+
+//2. EVENTS
+terms.addEventListener("change",(event)=>{
+  console.log(event.target.checked)
+})
+
+//3. METHODS
+
+terms.select()
+terms.checked=true;
+
+
+const handle=(event)=>{
+    event.preventDefault();
+
+    const formdata=new FormData(formel)
+
+    
+}
+
+formel.addEventListener("submit",handle)
+
+################### HANDLING SELECT TAG ELEMENTS #####################################
+const formel=document.forms.feedform;
+
+const country=formel.elements.country
+console.log("Country :",country)
+// console.log("Country :",country.value)
+
+
+/// PROPERTIES
+// country.value="THA"  //SET
+//SElected INdex
+// country.selectedIndex=3
+
+// SELECTED DOM ELEMENTS
+// console.log(country.options[country.selectedIndex].value)
+// console.log(country.options)
+// console.log(country.options.selectedIndex)
+
+
+//EVENTS LISTNERS
+// country.addEventListener("change",(event)=>{
+//   console.log("Changed :",event.target.options[event.target.selectedIndex])
+//   console.log("Changed :",event.target.options[event.target.selectedIndex].value) //get value
+//   console.log("Changed :",event.target.options[event.target.selectedIndex].textContent)// get Text
+// })
+
+//OPTIONS
+//USING DOM METHODS 
+const options=document.createElement("option")
+options.value="FAZ"
+options.text="AFRIKCA"
+
+const options2=new Option("INDONISIA","IDN")
+// ADDING OPTINS TO SELECT TAG
+// country.add(options)
+country.add(options,2)
+country.add(options2,4)
+country.remove(1)
+
+
+
+
+const handle=(event)=>{
+    event.preventDefault();
+
+    const formdata=new FormData(formel)
+
+    
+}
+
+formel.addEventListener("submit",handle)
+
+#######################################################	
+const formEl = document.forms.feedback;
+const countryEl = formEl.elements.country;
+
+console.log(countryEl);
+
+// 1. Properties
+countryEl.value = "IND"; // set
+console.log(countryEl.value); // get
+
+// 2. Selected Index
+countryEl.selectedIndex = 2;
+console.log(countryEl[2].value);
+
+// 3. Selected DOM Element
+console.log(countryEl.options[countryEl.selectedIndex].value);
+console.log(countryEl.options.selectedIndex);
+
+// 4. Events
+countryEl.addEventListener("change", (event) => {
+  console.log(event.target.options[event.target.selectedIndex]);
+  console.log(
+    `Selected value: ${event.target.options[event.target.selectedIndex].value}`
+  ); // get value
+  console.log(
+    `Selected Text: ${event.target.options[event.target.selectedIndex].text}`
+  ); // get text
+});
+
+// 5. Options
+// 5.1 Using DOM methods
+const optionEl = document.createElement("option");
+optionEl.value = "FAZ";
+optionEl.text = "South Africa";
+
+// 5.2. Using the Option Constructor
+const option2 = new Option("Indonesia", "IDN");
+
+// Adding option to select tag
+countryEl.add(optionEl, 2);
+countryEl.add(option2, 10);
+countryEl.remove(4); // removes 4th index
+
+const handleSubmit = (event) => {
+  event.preventDefault();
+
+  const formData = new FormData(formEl);
+};
+
+formEl.addEventListener("submit", handleSubmit);
+
+
+######################
+let inputFood = document.getElementById("input-food");
+let inputBtn = document.getElementById("input-btn");
+let foodContainer = document.getElementById("food-container");
+let noListEl=document.getElementById("nolist")
+const foodListStatistics=document.getElementById("food-list-statistics")
+
+
+const handleInputFood = () => {
+  // creating li element
+  let newFoodItemEl = document.createElement("li");
+
+  let div = document.createElement("div"); //for list-item
+  let divBtn = document.createElement("div");
+
+  newFoodItemEl.append(div, divBtn);
+
+  // assigning textContent & className to newFoodItemEl
+  div.textContent = inputFood.value;
+  newFoodItemEl.className = "food-item";
+
+  divBtn.parentElement.setAttribute("onClick", "removeFoodItem(event)");
+  divBtn.innerHTML = `<i class="fa fa-xmark"></i>`;
+  newFoodItemEl.append(divBtn);
+
+  // appending newly created element(newFoodItemEl) to foodContainer
+  foodContainer.append(newFoodItemEl);
+
+  // resetting the inputFood value
+  inputFood.value = "";
+  refreshUI();
+};
+
+inputBtn.addEventListener("click", handleInputFood);
+
+inputFood.addEventListener("keyup", (event) => {
+  if (event.key === "Enter") {
+    handleInputFood();
+  } else if (event.key === "KeyZ" && (event.ctrlKey || event.metaKey)) {
+    // Undo Operations
+    inputFood.value = "";
+  }
+});
+
+// remove Food items
+function removeFoodItem(event) {
+  const existingList = event.target.parentNode.parentNode;
+  console.log("logging event", event.target.parentNode.parentNode);
+
+  // new way
+  existingList.remove();
+  // old way
+  // existingList.parentNode.removeChild(existingList);
+  refreshUI()
+}
+
+
+function refreshUI(){
+  // if(foodContainer.children.length>0){
+    
+  //   noListEl.hidden=true;
+    foodListStatistics.innerText=`You Have ${foodContainer.children.length} Lists`
+  // }else{
+  //   noListEl.hidden=false
+
+  // }
+
+
+  //You can WRITE BETTER
+
+    noListEl.hidden=true;
+    foodContainer.children.length>0 ? 
+    ((noListEl.hidden=true),(foodListStatistics.hidden=false)) :((noListEl.hidden=false),(foodListStatistics.hidden=true));
+
+
+
+
+  }
+
+########
+
+const formEl = document.forms.feedback;
+
+
+const handleSubmit = (event) => {
+  event.preventDefault();
+
+  const formData = new FormData(formEl);
+  alert("Thank u for FEEDBACK FORM")
+};
+
+formEl.addEventListener("submit", handleSubmit);
+
+
+####################
+
+
+############################ ___________ REACT JS ___________ #####################
+
+CLASSS
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+class Demo{
+  methodone(){
+    let a=5;
+    let b=20;
+    let c=a+b;
+    document.getElementById("root").innerHTML=c;
+
+  }
+  methotwo(){
+    let a=30;
+    let b=20;
+    let d=a+b;
+    document.getElementById("root").innerHTML=d;
+  }
+
+}
+let mydemo=new Demo();
+mydemo.methodone();
+mydemo.methotwo();
+
+################ ARROW  FUNCTIONS #########################
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+let a=(x)=>{
+    let a=30;
+    let b=36;
+    let d=a+b+x;
+    document.getElementById("root").innerHTML=d;
+  };
+
+  a(4);
+
+
+##################### VARIABLES   ############################
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+var n=()=>{
+  var a=30;   /// var is uesd in outside and inside of the loop and body will get 
+
+  if(a===30){
+    let a=95;    /// let is used to only set of block code used otherwise body inside  not use
+    document.getElementById("root").innerHTML=a;
+
+  }
+    
+    // document.getElementById("root").innerHTML=a;
+  };
+
+  n();
+
+############### REACT JSX (JAVASCRIPT AND XML) #########################
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+
+// import reportWebVitals from './reportWebVitals';
+// import './index.css'
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+ 
+const myele =<div >
+  <h1 className='header'>Prabakaran {5+5}</h1>
+  <h2>Hi</h2>
+  <p>How are U</p>
+  </div>                 // React.createElement('h1',{},"Hello Word");
+
+root.render(myele,document.getElementById("root"));
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+// reportWebVitals();
+
+
+########################   REACT COMPONENTS ############################
+1. FUNCTIONAL COMPONENT
+ 
+2. CLASS COMPONENT
+
+ 
+########################### FUNCTIONAL COMPONENT  ##########################
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+
+// import reportWebVitals from './reportWebVitals';
+// import './index.css'
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+ 
+function Header(){
+  return <div><h1>AvailAble</h1>
+  <h2>Mylogo</h2></div>
+}
+ function Sidebar(){
+  return <h1>Prabakaran Side Bar</h1>
+ }
+
+ function Navbar(){
+  return <h2>NAVBAR</h2>
+ }
+ function Mywebsite(){
+  return <div>
+    <Header/>
+    <Sidebar/>
+    <Navbar/>
+  </div>
+ }
+root.render(<Mywebsite/>,document.getElementById("root"));
+
+################################# CLASS COMPONENT  ####################################
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import Mywebsite from './App';
+// import reportWebVitals from './reportWebVitals';
+// import './index.css'
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+class Newwebsite extends React.Component
+{
+  render(){
+    return <div>
+      <Mywebsite/>
+       <h2>New WebSite</h2>
+      
+    </div>
+  }
+}
+root.render(<Newwebsite/>,document.getElementById("root"));
+
+
+// reportWebVitals();
+
+
+######################    PROPERTIES(PROPS)  ############
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+// import Mywebsite from './App';
+// import reportWebVitals from './reportWebVitals';
+// import './index.css'
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+class Learnreactprops extends React.Component
+{
+  render(){
+    return <div>
+       <h2>Learn {this.props.val.topic} Properties(props) laguage is {this.props.val.language} in {this.props.val.concept}</h2>
+      
+    </div>
+  }
+}
+
+class Learnreactprops2 extends React.Component
+{
+  render(){
+    const v={topic:"React",language:"English",concept:"Properies"}  /// any Value
+    return <Learnreactprops val={v}/>
+  }
+}
+root.render(<Learnreactprops2/>,document.getElementById("root"));
+
+######################
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+// import Mywebsite from './App';
+// import reportWebVitals from './reportWebVitals';
+// import './index.css'
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+class Learnreactprops extends React.Component
+{
+  render(){
+    return <div>
+       <h2>Learn {this.props.val.topic} Properties(props) laguage is {this.props.val.language} in {this.props.val.concept}</h2>
+      
+    </div>
+  }
+}
+Learnreactprops.defaultProps={concept:"properitessss",languages:"Chineess",topic:"JavaScript"}
+root.render(<Learnreactprops/>,document.getElementById("root"));
+
+#########################    REACT STATE   ###########
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+// import Mywebsite from './App';
+// import reportWebVitals from './reportWebVitals';
+// import './index.css'
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+ class Reactstate extends React.Component{
+  constructor(){
+    super();
+    this.state={initialvalue:"Welcome",name:"Guys"}
+
+  }
+  render(){
+    return <h1>{this.state.initialvalue}  {this.state.name}</h1>
+    
+
+  }
+ }
+
+
+root.render(<Reactstate/>,document.getElementById("root"))
+// root.render(<Learnreactprops/>,document.getElementById("root"));
+
+// reportWebVitals();
+
+#########################
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+// import Mywebsite from './App';
+// import reportWebVitals from './reportWebVitals';
+// import './index.css'
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+ class Reactstate extends React.Component{
+  constructor(){
+    super();
+    this.state={initialvalue:"Welcome",name:"Guys"}
+
+  }
+  changevalue=()=>{
+    this.setState({initialvalue:"Thanks for Watching"});
+  }
+  render(){
+    return <div><h1>{this.state.initialvalue}  {this.state.name}</h1>
+    <br></br>
+    <button type='button' onClick={this.changevalue}>Exit</button>
+    </div>
+
+  }
+ }
+
+
+root.render(<Reactstate/>,document.getElementById("root"))
+// root.render(<Learnreactprops/>,document.getElementById("root"));
+
+// reportWebVitals();
+
+#################  REACT LIFE CYCLES ############
+IN REACT EVERY COMPONENTS HAS VARIOUS LIFECYCLE METHODS
+
+1. INITIAL PHASE
+
+2. MOUNTING PHASE
+
+3. UPDATING PHASE
+
+4. UNMOUNTING PHASE
+
+1. INITIAL PHASE
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+// import Mywebsite from './App';
+// import reportWebVitals from './reportWebVitals';
+// import './index.css'
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+class Lifecycle extends React.Component{
+  constructor(){
+    super();
+    this.state={value:"Welcome",name:"Prabakaran"}
+  }
+  componentWillMount()
+  {
+    alert("Learn React js in Life Cycle");
+  }
+  render(){
+    return <h1>{this.state.value}  {this.state.name}</h1>
+  }
+  componentDidMount()
+  {
+    setTimeout(() => {
+      this.setState({value:"Thank U"})
+      
+    }, 5000);
+  }
+
+}
+
+root.render(<Lifecycle/>,document.getElementById("root"))
+// root.render(<Learnreactprops/>,document.getElementById("root"));
+
+// reportWebVitals();
+
+##############
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+// import Mywebsite from './App';
+// import reportWebVitals from './reportWebVitals';
+// import './index.css'
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+class Lifecycle extends React.Component{
+  constructor(){
+    super();
+    this.state={value:"Welcome",name:"Prabakaran"}
+  }
+  componentWillMount()
+  {
+    alert("Learn React js in Life Cycle");
+  }
+  render(){
+    return <div>
+      <h1>{this.state.value}  {this.state.name}</h1>
+      <br></br>
+      <button type='button' onClick={this.changecolor}>Change Value</button>
+      <button type='button' onClick={this.delete}>Delete Header</button>
+      </div>
+  }
+  changecolor=()=>{
+    this.setState({value:"Learn React in Tamil"})
+  }
+  componentDidMount()
+  {
+    setTimeout(() => {
+      this.setState({value:"Thank U"})
+      
+    }, 5000);
+  }
+  componentWillUpdate(){
+    alert("Do u want update new value !!!")
+  }
+  componentDidUpdate(){
+    document.getElementById("mydiv").innerHTML="NEW VALUE UPDATED SUCCEFULLY :"+this.state.value
+  }
+  shouldComponentUpdate(){
+    return true
+  }
+  delete=()=>{
+    this.setState({value:false,name:false})
+  }
+  componentWillUnmount(){
+    alert("Header Deleted")
+  }
+
+}
+
+root.render(<Lifecycle/>,document.getElementById("root"))
+// root.render(<Learnreactprops/>,document.getElementById("root"));
+
+// reportWebVitals();
+###################   REACT EVENT HANDLING #############
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+// import Mywebsite from './App';
+// import reportWebVitals from './reportWebVitals';
+// import './index.css'
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+  
+
+class Event extends React.Component
+{
+  constructor(){
+    super();
+    this.state={msg:"Welcome"}
+  }
+  clickevent=(a)=>{
+    this.setState({msg:a})
+  }
+  render(){
+    return(
+      <div>
+        <h1>{this.state.msg}</h1>         {()=>this.clickevent("Hello World")} /// SAME SETTINGS
+        <button type='button' onMouseOver={this.clickevent.bind(this,"Hello World")}>CLICK</button> 
+
+      </div>
+    )
+    
+  }
+  }
+ root.render(<Event/>,document.getElementById("root"))
+// root.render(<Learnreactprops/>,document.getElementById("root")); 
+
+// reportWebVitals();
+#####################   REACT CSS  #####################
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import './App.css';
+import styles from  './demo.module.css';
+// import Mywebsite from './App';
+// import reportWebVitals from './reportWebVitals';
+// import './index.css'
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+  
+
+class Reactstyle extends React.Component
+{
+  render(){
+    const mystyle={color:"blue",fontFamily:"Arial"}
+    return(
+      <div>
+        <h1 style={{color:"red",textAlign:"center"}}>Hello World</h1>
+        <h2 style={mystyle}>Welcome</h2>
+        <h3 className='App'>Thank U</h3>
+        <h3 className={styles.heading}>External Modules</h3>
+      </div>
+    )
+    
+  }
+  }
+ root.render(<Reactstyle/>,document.getElementById("root"))
+// root.render(<Learnreactprops/>,document.getElementById("root")); {()=>this.clickevent("Hello World")}
+
+// reportWebVitals();
+
+############## FORMS HANDLING ###################
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import './App.css';
+// import styles from  './demo.module.css';
+// import Mywebsite from './App';
+// import reportWebVitals from './reportWebVitals';
+// import './index.css'
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+  
+
+class Reactform extends React.Component
+{
+  constructor(){
+    super();
+    this.state={username:""}
+
+  }
+  uservalue=(event)=>{
+    this.setState({username:event.target.value})
+
+  }
+  render(){
+    return(
+     <form>
+        <h1>Hello {this.state.username}</h1>
+        Enter Your Name :<input type="text"name='username' onChange={this.uservalue}></input>
+     </form>
+    )
+    
+  }
+  }
+ root.render(<Reactform/>,document.getElementById("root"))
+// root.render(<Learnreactprops/>,document.getElementById("root")); {()=>this.clickevent("Hello World")}
+
+// reportWebVitals();
+########################
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import './App.css';
+// import styles from  './demo.module.css';
+// import Mywebsite from './App';
+// import reportWebVitals from './reportWebVitals';
+// import './index.css'
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+  
+
+class Reactform extends React.Component
+{
+  constructor(){
+    super();
+    this.state={username:"",age:null,error:""}
+
+  }
+  uservalue=(event)=>{
+    let n=event.target.name;
+    let v=event.target.value
+    let err="";
+    if(n==="age"){
+      if (v!=="" && !Number(v)){
+        err=<strong>Invalid Value, you age must be a Number </strong>
+      }
+    }
+    this.setState({error:err})
+    this.setState({[n]:v})
+
+  }
+  render(){
+    return(
+     <form>
+        <h1>Hello {this.state.username}</h1>
+        <h1>Your Age is  {this.state.age}</h1>
+        Enter Your Name :<input type="text" name='username'  onChange={this.uservalue}></input>
+        Enter Your Age :<input type="text" name='age' onChange={this.uservalue}></input> {this.state.error}
+     </form>
+    )
+    
+  }
+  }
+ root.render(<Reactform/>,document.getElementById("root"))
+// root.render(<Learnreactprops/>,document.getElementById("root")); {()=>this.clickevent("Hello World")}
+
+// reportWebVitals();
+############     FORM SUBMIT #######################
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import './App.css';
+// import styles from  './demo.module.css';
+// import Mywebsite from './App';
+// import reportWebVitals from './reportWebVitals';
+// import './index.css'
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+  
+
+class Reactform extends React.Component
+{
+  constructor(){
+    super();
+    this.state={username:"",age:null,error:""}
+
+  }
+  uservalue=(event)=>{
+    let n=event.target.name;
+    let v=event.target.value
+    let err="";
+    if(n==="age"){
+      if (v!=="" && !Number(v)){
+        err=<strong>Invalid Value, you age must be a Number </strong>
+      }
+    }
+    this.setState({error:err})
+    this.setState({[n]:v})
+
+  }
+  formsubmit=(event)=>{
+    event.preventDefault()
+    alert("Your Name "+this.state.username);
+  }
+  render(){
+    return(
+     <form onSubmit={this.formsubmit}>
+        <h1>Hello {this.state.username}</h1>
+        <h1>Your Age is  {this.state.age}</h1>
+        Enter Your Name :<input type="text" name='username'  onChange={this.uservalue}></input>
+        Enter Your Age :<input type="text" name='age' onChange={this.uservalue}></input> {this.state.error}
+        SUBMIT : <input type="submit"/>
+     </form>
+    )
+    
+  }
+  }
+ root.render(<Reactform/>,document.getElementById("root"))
+// root.render(<Learnreactprops/>,document.getElementById("root")); {()=>this.clickevent("Hello World")}
+
+// reportWebVitals();
+##################     REACT FRAGMENTS ###############
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import './App.css';
+// import styles from  './demo.module.css';
+// import Mywebsite from './App';
+// import reportWebVitals from './reportWebVitals';
+// import './index.css'
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+  
+
+class Tablecreation extends React.Component
+{
+  render(){
+    return(
+      <table>
+        <tr>
+          <Rowcreatiion/>
+        </tr>
+      </table>
+   
+    )
+    
+  }
+  }
+  class Rowcreatiion  extends React.Component
+  {
+    render(){
+      return(
+        <React.Fragment> (OR)  <>
+          <td>HIII</td>
+          <td>bIII</td>
+        </React.Fragment> (OR)   </>
+      )
+    }
+  }
+ root.render(<Tablecreation/>,document.getElementById("root"))
+//  root.render(<Rowcreatiion/>,document.getElementById("root"))
+// root.render(<Learnreactprops/>,document.getElementById("root")); {()=>this.clickevent("Hello World")}
+
+// reportWebVitals();
+
+######################## REACT LISTS ################################
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import './App.css';
+// import styles from  './demo.module.css';
+// import Mywebsite from './App';
+// import reportWebVitals from './reportWebVitals';
+// import './index.css'
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const newlists=[1,2,3,"Valuable Content",5];
+const rl=newlists.map((listvalues)=>{
+  return <li>{listvalues+"      :"+newlists}</li>
+
+});
+
+root.render(<ul type='none'>{rl}</ul>,document.getElementById("root"))
+
+// reportWebVitals();
+################################
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import './App.css';
+// import styles from  './demo.module.css';
+// import Mywebsite from './App';
+// import reportWebVitals from './reportWebVitals';
+// import './index.css'
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+function  Menubar(val){
+const newlists=val.values;
+const rl=newlists.map((listvalues)=>{
+  return <li>{listvalues}</li>
+
+});
+return <ul type='none'>{rl}</ul>
+}
+
+const myvalue=[2,3,4,5,6,55]
+root.render(<Menubar values={myvalue}/>,document.getElementById("root"))
+
+// reportWebVitals();
+
+################ LISTS KEYS  ###########
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import './App.css';
+// import styles from  './demo.module.css';
+// import Mywebsite from './App';
+// import reportWebVitals from './reportWebVitals';
+// import './index.css'
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+function  Menubar(val){
+const summary=val.data.map((show)=>
+  <div key={show.id}>
+    <h1>{show.id} : {show.title} : {show.content}</h1>
+
+  </div>
+  )
+  return(
+    <div>
+      {summary}
+    </div>
+  )
+};
+
+const myvalue=[
+  {id:1,title:"First",content:"Welcome to Techno Wizard"},
+  {id:2,title:"Second",content:"Learn Programming Languages"}
+]
+root.render(<Menubar data={myvalue}/>,document.getElementById("root"));
+##############    ######################
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+function  Listkey(props){
+  const item=props.item;
+  const key=props.keys
+  return(
+    <li>{key} {item}</li>
+  );
+}
+function Mylists(props){
+  const listitem=props.myvalue.map((listvalue,index)=>
+  <Listkey keys={index} item={listvalue}/>
+  );
+  return(
+    <div>
+      <h2>Correct KEY USAGE EXAMPLES</h2>
+      <ul>{listitem}</ul>
+    </div>
+  )
+}
+const mydata=[200,1000,5000,300]
+root.render(<Mylists myvalue={mydata}/>,document.getElementById("root"));
+#######################  REACT HOOKS ( USESTATE ) ##########################
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom/client';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+function Reacthook(){
+  const [count,updatecount]=useState(0);
+  return(
+    <div>
+      <p>You Clicked the above B utton {count} times</p>
+      <button onClick={()=>updatecount(count+1)}>Click Me</button>
+    </div>
+  )
+}
+
+root.render(<Reacthook/>,document.getElementById("root"));
+
+########################  USE EFFECT #########
+import React, { useState, useEffect } from 'react';
+import ReactDOM from 'react-dom/client';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+function Reacthook(){
+  const [count,updatecount]=useState(0);
+  useEffect(()=>{
+    alert("Hello World")
+  })
+  return(
+    <div>
+      <p>You Clicked the above B utton {count} times</p>
+      <button onClick={()=>updatecount(count+1)}>Click Me</button>
+    </div>
+  )
+}
+
+root.render(<Reacthook/>,document.getElementById("root"));
+#################   REACT ROUTER ###################
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import {BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom'
+import Home from './Home';
+import About from './About.js';
+import Join from './Joinus.js'
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const routing=(
+  <div>
+    <h1>Routing</h1>
+    <Router>
+    <Link to='/j'>Click hear</Link>
+
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/a' element={<About/>}/>
+        <Route path='/j' element={<Join/>}/>
+      </Routes>
+      
+    </Router>
+  </div>
+)
+root.render(routing,document.getElementById("root"));
+
+#########################
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import {BrowserRouter as Router, Route, Routes, Link, NavLink, Switch} from 'react-router-dom'
+import Home from './Home.js';
+import About from './About.js';
+import Join from './Joinus.js'
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const routing=(
+  <div>
+    <Router>
+    <h1>Routing</h1>
+    <ul>
+      <li ><Link to={'/'}>Home Pages</Link></li>
+      <li><Link to={'/a'}>About Pages</Link></li>
+      <li><Link to={'/j'}>Join US Pages</Link></li>
+    </ul>
+    <Link to='/j'>Click hear</Link>
+
+      <Routes>
+        {/* <Route exact path='/' element={<Home/>}/> */}
+        <Route  path='/' element={<Home/>}/>
+        <Route path='/a' element={<About/>}/>
+        <Route path='/j' element={<Join/>}/>
+      </Routes>
+      
+    </Router>
+  </div>
+)
+root.render(routing,document.getElementById("root"));
+####################################
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import {BrowserRouter as Router, Route, Routes, Link, NavLink, Switch} from 'react-router-dom'
+import Home from './Home.js';
+import About from './About.js';
+import Join from './Joinus.js'
+import Notfound from './Notfound.js';
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const routing=(
+  <div>
+    <Router>
+    <h1>Routing</h1>
+    <ul>
+      <li ><NavLink to={'/'} exact activeStyle={{color:"red"}}>Home Pages</NavLink></li>
+      <li><NavLink to={'/a'} exact activeStyle={{color:"red"}}>About Pages</NavLink></li>
+      <li><NavLink to={'/j'} exact activeStyle={{color:'red'}}>Join Us</NavLink></li>
+      
+    </ul>
+    <Link to='/j'>Click hear</Link>
+
+      <Routes>
+        {/* <Route exact path='/' element={<Home/>}/> */}
+        <Route  path='/' element={<Home/>}/>
+        <Route path='/a' element={<About/>}/>
+        <Route path='/j' element={<Join/>}/>
+      </Routes>
+      
+    </Router>
+  </div>
+)
+root.render(routing,document.getElementById("root"));
+##############################  NAVLINK WORKING ##############
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import {BrowserRouter as Router, Route, Routes, Link, NavLink, Switch} from 'react-router-dom'
+import Home from './Home.js';
+import About from './About.js';
+import Join from './Joinus.js'
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const activelink=({isActive})=>{
+  return {color:isActive? "green" : "black",fontWeight: isActive? "bold" : ""}
+}
+
+const routing=(
+  
+    <Router>
+      <div>
+            
+        <h1>Routing</h1>
+        <ul>
+          {/* <li ><NavLink to={'/'} style={({isActive})=>({color:isActive ? "green" : "red"})}>Home Pages</NavLink></li> */}
+          <li ><NavLink to={'/h'} style={activelink}>Home Pages</NavLink></li>
+          <li><NavLink to={'/a'} style={activelink}>About Pages</NavLink></li>
+          <li><NavLink to={'/j'} style={activelink}>Join Us</NavLink></li>
+          
+        </ul>
+        <Link to='/j'>Click hear</Link>
+
+          <Routes>
+            {/* <Route exact path='/' element={<Home/>}/> */}
+            <Route  path='/h' element={<Home/>}/>
+            <Route path='/a' element={<About/>}/>
+            <Route path='/j' element={<Join/>}/>
+          </Routes>
+      </div>  
+    </Router>
+  
+)
+root.render(routing,document.getElementById("root"));
+########################   BOOTSTRAP BUTTONS ################
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+class Home extends React.Component
+{
+  render(){
+    return <div class="">
+      <button className="btn btn-primary">bootstrap bUTTONS
+      </button>
+
+      <h1>Welcome to Home Pages</h1>
+      <form>
+        <div class="col-md-8">
+          <div class="form-group">
+            <label>Username</label>
+            <input type="text"></input>
+          </div>
+          <hr></hr>
+          <div>
+            <label>PassWord</label>
+            <input type="text"></input>
+          </div>
+        </div>
+      </form>
+      </div>
+
+  }
+}
+
+root.render(<Home/>,document.getElementById("root"));
+
+########### BOOTRAP LOGIN FORM VALIDATION IN REACT JS   #######
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+class Home extends React.Component
+{
+  render(){
+    return(
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <form>
+            <div class="form-group">
+              <h1 style={{color:"green",textAlign:"center",margin:"10px"}}>Login</h1>
+              <label class="skill" for="Subject">User Name</label>
+              <input type="text" id='usrename' class='form-control' required></input>
+            </div>
+            <div>
+              <label class="skill" for="Subject">Password</label>
+              <input type="password" id="pwd" class="form-control" required></input>
+            </div>
+            <br></br>
+            <input type="submit" value="login" id='navigation' class="btn btn-primary"></input>
+          </form>
+
+        </div>
+        
+      </div>
+    )
+
+  }
+}
+
+root.render(<Home/>,document.getElementById("root"));
+
+################  SIGNUP FORM  ################
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+// import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+
+class SignUpForm extends React.Component
+{
+  constructor(){
+    super();
+    this.state={username:"",pno:null,errormsg:""};
+  }
+  uservalue=(event)=>{
+    let n=event.target.name;
+    let v=event.target.value;
+    let err=""
+    if(n==="phonenumber"){
+      if(v!=="" && !Number(v)){
+        err=<strong>Invalid Value, Enter the Number</strong>
+      }
+    } 
+    this.setState({errormsg:err});
+    this.setState({[n]:v})
+  }
+  render(){
+    return(
+          <form class='was-validated container container-sm border'>
+          <div class="form-group ">
+              <h1 style={{color:"green",textAlign:"center",margin:"10px"}}>Welcome {this.state.username}</h1>
+              <label  class="skill" for="uname">User Name</label>
+              <input type="text" id='usrename' onChange={this.uservalue} placeholder='Enter Your Name' name="username" class='form-control' required></input>
+            </div>
+            <div>
+              <label class="skill" for="uname">Phone Numbers</label>
+              <input type="text" id="pno" onChange={this.uservalue} placeholder='Enter Your Mobile Number' name="phonenumber" class="form-control" required></input> {this.state.errormsg}
+            </div>
+            <div>
+              <label for="pwd">Password</label>
+              <input type="password" id="pwd" placeholder='Enter Your Password' name="password" class="form-control" required></input>
+            </div>
+            <div class="form-group">
+              <div class="form-group form-check">
+                <label class="form-check-label"></label>
+                <input class="form-check-input" type="checkbox" name="remember" required></input>
+              </div>
+            </div>
+           <br></br>
+            <button type="submit" class="btn btn-primary">Signup</button>
+            <br></br>
+          </form>
+
+    )
+
+  }
+}
+
+export default SignUpForm
+
+##################### CREATING  MAIL FORM USING REACT JS ########################
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+
+class SignUpForm extends React.Component
+{
+  constructor(){
+    super();
+    this.state={subject:"",body:""};
+  }
+  validation=(event)=>{
+    var subject=document.getElementById("subject").value;
+    var body=document.getElementById("body").value;
+    window.location.href="mailto:cprabakaran704@gmail.com?subject="+subject+"&body="+body
+    event.preventDefault();
+    return false;
+  }
+  render(){
+    return(
+      <div class='heading'>
+        <div class='container' id='mailme'>
+        <h1 style={{textAlign:"center",color:"green"}}>Mail Form</h1>
+          <div class="row">
+            <div class="col-sm-8 offset-md-2">
+              <form class="justify-content-center" onSubmit={this.validation} target="_blank" method='GET'>
+                <div class="form-group form-group-lg">
+                  <label class="skills" for="subject">
+                    <strong>Name</strong>
+                  </label>
+                  <input type="text" id='subject' class="form-control" required></input>
+                </div>
+                <div class="form-group form-group-lg">
+                  <label class="skills" for="body">
+                    <strong>FeedBack</strong>
+                  </label>
+                  <textarea id="body" class="form-control" rows="5" required></textarea>
+                </div>
+                <br></br>
+                <input type="submit" value="Send" id="navigation" class="btn btn-primary"></input>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+          
+    )
+
+  }
+}
+
+export default SignUpForm
+########################### NAMED EXPORT #########################################
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+export function SignUpForm(){
+  return(
+    <div>
+      <h1>This Muthuramalingam Tutorial</h1>
+    </div>
+  )
+}
+export function SignUpForm1(){
+  return(
+    <div>
+      <h1>This Muthuramalingam Tutorials 2</h1>
+    </div>
+  )
+}
+
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import {SignUpForm,SignUpForm1} from './Signupform'
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+class Home extends React.Component
+{
+  render(){
+    return(
+      <div>
+       <SignUpForm> </SignUpForm>
+        <SignUpForm1></SignUpForm1>
+      </div>
+    )
+
+  }
+}
+
+root.render(<Home/>,document.getElementById("root"));
+
+######################### React Props   ###########
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+export function Mobile(props){
+  return(
+    <div class="card" style={{textAlign:"center"}}>
+        <div class="card-body">
+            <h5 class="card-title">{props.brandname}</h5>
+            <p class="card-text">Somthinf on the material availabale in thr laptop</p>
+            <p>{props.brandprice}</p>
+            <a href='#' class="btn btn-primary">Go SomeWhere</a>
+        </div>
+    </div>
+  )
+}
+
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import {SignUpForm,SignUpForm1} from './Signupform'
+import { Mobile } from './Mobile';
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+export function Mobile(props){
+    const {brandname,brandprice}=props;
+
+    return(
+    <div class="card" style={{textAlign:"center"}}>
+        <div class="card-body">
+            <h5 class="card-title">{brandname}</h5>
+            <p class="card-text">Somthinf on the material availabale in thr laptop</p>
+            <p>{brandprice}</p>
+            <a href='#' class="btn btn-primary">Go SomeWhere</a>
+        </div>
+
+    </div>
+  )
+}
+
+
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+export function Mobile({brandname,brandprice}){
+    return(
+    <div class="card" style={{textAlign:"center"}}>
+        <div class="card-body">
+            <h5 class="card-title">{brandname}</h5>
+            <p class="card-text">Somthinf on the material availabale in thr laptop</p>
+            <p>{brandprice}</p>
+            <a href='#' class="btn btn-primary">Go SomeWhere</a>
+        </div>
+
+    </div>
+  )
+}
+
+
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+export function Mobile({brandname,brandprice="56000"}){
+    return(
+    <div class="card" style={{textAlign:"center"}}>
+        <div class="card-body">
+            <h5 class="card-title">{brandname}</h5>
+            <p class="card-text">Somthinf on the material availabale in thr laptop</p>
+            <p>{brandprice}</p>
+            <a href='#' class="btn btn-primary">Go SomeWhere</a>
+        </div>
+
+    </div>
+  )
+}
+
+
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+export function Mobile({brandname,brandprice="56000",offer="0"}){
+    return(
+    <div class="card" style={{textAlign:"center"}}>
+        <div class="card-body">
+            <h5 class="card-title">{brandname}</h5>
+            <p class="card-text">Somthinf on the material availabale in thr laptop</p>
+            <p>{brandprice}</p>
+            <p>Offer : {offer}</p>
+            <a href='#' class="btn btn-primary">Go SomeWhere</a>
+        </div>
+
+    </div>
+  )
+}
+
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+export function Mobile({brandname,brandprice="56000",offer="0"}){
+    return(
+    <div class="card" style={{textAlign:"center"}}>
+        <div class="card-body">
+            <h5 class="card-title">{brandname}</h5>
+            <p class="card-text">Somthinf on the material availabale in thr laptop</p>
+            <p>{brandprice}</p>
+            <p>Offer : {offer}</p>
+            <a href='#' class="btn btn-primary">Go SomeWhere</a>
+        </div>
+
+    </div>
+  )
+}
+
+
+
+
+class Home extends React.Component
+{
+  render(){
+    return(
+      <div>
+       <SignUpForm> </SignUpForm>
+        <SignUpForm1></SignUpForm1>
+        <Mobile brandname="Samsung" brandprice="13000"></Mobile>
+        <Mobile brandname="NokiA" brandprice="12000"></Mobile>
+        <Mobile brandname="Realme" brandprice="11000"></Mobile>
+        <Mobile brandname="Vivo" brandprice="15000"></Mobile>
+      </div>
+    )
+
+  }
+}
+
+root.render(<Home/>,document.getElementById("root"));
+
+##########################################
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import {SignUpForm,SignUpForm1} from './Signupform'
+import { Mobile } from './Mobile';
+import { useState } from 'react';
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+function App(){
+  const [dispaly,setDispaly]=useState(1234)
+  function incrementDispaly(){
+    setDispaly(dispaly+1)
+  }
+  return(
+    <div>
+      <h3>{dispaly}</h3>
+      <br></br>
+      <button class="btn btn-primary" onClick={incrementDispaly}>Increase</button>
+    </div>
+  )}
+root.render(<App/>,document.getElementById("root"));
+
+#####################
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import {SignUpForm,SignUpForm1} from './Signupform'
+import { Mobile } from './Mobile';
+import { useState } from 'react';
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+function App(){
+  const [dispaly,setDispaly]=useState(1234)
+  function incrementDispaly(){
+    setDispaly("Prabakaran")
+  }
+  return(
+    <div>
+      <h3>{dispaly}</h3>
+      <br></br>
+      <button class="btn btn-primary" onClick={incrementDispaly}>Increase</button>
+    </div>
+  )}
+root.render(<App/>,document.getElementById("root"));
+
+##############################################################
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import {SignUpForm,SignUpForm1} from './Signupform'
+import { Mobile } from './Mobile';
+import { useState } from 'react';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+function App(){
+  const [dispaly,setDispaly]=useState(1234)
+  function incrementDispaly(){
+    setDispaly(dispaly+1)
+  }
+  function degrementDispaly(){
+    setDispaly(dispaly-1)
+  }
+  return(
+    <div>
+      <h3>{dispaly}</h3>
+      <br></br>
+      <button class="btn btn-primary" onClick={incrementDispaly}>Increase</button>
+      <button class="btn btn-danger" onClick={degrementDispaly}>Decrease</button>
+    </div>
+  )}
+root.render(<App/>,document.getElementById("root"));
+
+############################################
+
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom/client';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+
+
+export function UseStateArray(){
+  const items=["Dhoni","Rohit","Sachin","Rishab"]
+  const [data,setData]=useState([])
+  const addPlayer=()=>{
+    setData(items);
+  }
+  const addOnePlayer=()=>{
+    const bowler=["Natarajan"]
+    // setData(bowler)
+    setData([...data,bowler])
+  }
+  return(
+    <div>
+      <h1>UseState Array</h1>
+      <br></br>
+      {data.map((items)=>{
+        return <li>{items}</li>
+      })}
+      <button onClick={addPlayer} class="btn btn-primary">AddPlayer</button>
+      <button onClick={addOnePlayer} class="btn btn-success">Add One More Player</button>
+    </div>
+  )
+}
+
+#############################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
